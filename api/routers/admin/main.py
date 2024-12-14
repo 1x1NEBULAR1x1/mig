@@ -14,6 +14,7 @@ from api.routers.admin.settings import r as settings_router
 from database.engine import Database
 from api.routers.access_token import create_access_token, check_admin_token
 from datetime import timedelta
+from fastapi.templating import Jinja2Templates
 
 r = APIRouter(prefix="/admin", tags=["Admin"])
 ar = APIRouter(prefix="/admin", tags=["Admin"])
