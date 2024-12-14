@@ -30,6 +30,10 @@ class Database:
                 await ssn.refresh(tax_)
             return tax_
 
+    async def get_codes(self):
+        async with self.ssn() as ssn:
+            return (await ssn.scalars(select(Code))).all()
+
     async def update_tax(self, tax: float) -> Tax:
         async with self.ssn() as ssn:
             await ssn.execute(update(Tax).values(tax=tax))

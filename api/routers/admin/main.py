@@ -16,18 +16,46 @@ from api.routers.access_token import create_access_token, check_admin_token
 from datetime import timedelta
 
 r = APIRouter(prefix="/admin", tags=["Admin"])
+ar = APIRouter(prefix="/admin", tags=["Admin"])
+
+r.include_router(ar)
 db = Database()
+templates = Jinja2Templates(directory='./admin_panel/dist')
 
-r.include_router(cities_router)
-r.include_router(users_router)
-r.include_router(categories_router)
-r.include_router(sub_categories_router)
-r.include_router(products_router)
-r.include_router(orders_router)
-r.include_router(branches_router)
-r.include_router(settings_router)
+ar.include_router(cities_router)
+ar.include_router(users_router)
+ar.include_router(categories_router)
+ar.include_router(sub_categories_router)
+ar.include_router(products_router)
+ar.include_router(orders_router)
+ar.include_router(branches_router)
+ar.include_router(settings_router)
 
-@r.post('/login', response_class=JSONResponse)
+@r.get('', response_class=HTMLResponse)
+async def get_admin_panel():
+    return templates.TemplateResponse(name='index.html', request=request)
+
+
+
+@ar.get('/codes')
+async def get_codes():
+    try:
+        codes = await db.get_codes()
+        return JSONResponse(status_code=200, content=jsonable_encoder(
+            [
+                {
+                    'code': code.code,
+                    'phone_number': code.phone_number,
+                    'is_userd': code.is_used
+                } for code in codes
+            ]
+        ))
+    except Exception as e:
+        print(e)
+        return JSONResponse(status_code=202, content=str(e))
+
+
+@ar.post('/login', response_class=JSONResponse)
 async def login(admin: Admin, response: JSONResponse):
     try:
         admin = await db.login_admin(login=admin.login, password=admin.hashed_password)
@@ -46,7 +74,7 @@ async def login(admin: Admin, response: JSONResponse):
         print(e)
         return JSONResponse(status_code=202, content=str(e))
 
-@r.get("/protected", response_class=JSONResponse)
+@ar.get("/protected", response_class=JSONResponse)
 async def protected(request: Request):
     try:
         admin = await check_admin_token(request)
