@@ -1,0 +1,139 @@
+.footer {
+  padding-top: 1.8vh;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 28.3vh;
+  background: #FFFFFF;
+  border-top: 1px solid #EEEFF3;
+  backdrop-filter: blur(16px);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.760416667vw;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 9.89583vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  aspect-ratio: 149/49;
+}
+
+.contactData {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.contactDataText {
+  width: 100%;
+  height: 3.166667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.166667vh;
+  line-height: 120%;
+  color: #1B1C1F;
+  margin-bottom: 1vh;
+  transition: color 0.3s ease;
+}
+
+.contactDataText:hover {
+  color: #1B9F01;
+  cursor: pointer;
+}
+
+
+.contactDataSocialsContainer {
+  margin-top: 1.67vh;
+  display: flex;
+  width: 100%;
+  gap: 1vw;
+  
+}
+
+.contactDataSocialsIcon {
+  width: 2.0833vw;
+  height: 2.0833vh;
+  fill: #1B1C1F;
+  transition: fill 0.3s ease;
+}
+
+.contactDataSocialsIcon:hover {
+  fill: #1B9F01;
+  cursor: pointer;
+}
+
+
+.logoAndCopyrightContainer {
+  padding-left: 2.0833vw;
+  padding-bottom: 2.0833vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 16.5vw;
+}
+
+.copyright {
+  width: 6.45833vw;
+  height: 2.0833vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc((0.9375vw + 1.5vh)/2);
+  line-height: 140%;
+  color: #56585F;
+}
+
+.infoContainer {
+  width: 31vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2.0833vh;
+}
+
+.infoCategoriesContainer {
+  width: 31vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCategoryButton {
+  font-size: 1.33333333vh;
+  margin-bottom: 1.8vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  color: #56585F;
+  transition: color 0.3s ease;
+}
+
+.infoCategoryButton:hover {
+  color: #1B9F01;
+  cursor: pointer;
+}
+
+.privatePolicyAndPublicOfertContainer {
+  display: flex;
+  width: 100%;
+}
+
+.PPAPOButton {
+  padding: 0;
+  width: 14.1145833vw;
+  height: 2.0833vh;
+  font-size: 1.33333333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  color: #56585F;
+  transition: color 0.3s ease;
+}
+
+.PPAPOButton:hover {
+  color: #1B9F01;
+  cursor: pointer;
+}

@@ -1,0 +1,259 @@
+.map {
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.8333vh;
+  position: sticky;
+  top: 10vh;
+  width: 23.6vw;
+  height: auto;
+  left: 2vw;
+  filter: drop-shadow(4px 4px 42px rgba(156, 143, 132, 0.4));
+  z-index: 1;
+}
+
+.menuHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6667vh 1.041667vw;
+  gap: 2vh;
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  border-top: 1px solid #EEEFF3;
+  border-radius: 1.25vw;
+}
+
+.menuHeaderStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6667vh 1.041667vw;
+  gap: 1.041667vw;
+  width: 100%;
+  aspect-ratio: 413/96;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.833vw;
+}
+
+.menuHeaderStatusContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.333vh 0.83333vw;
+  width: 4.6667vh;
+  height: 4.6667vh;
+  background: #1B9F01;
+  border-radius: 50%;
+}
+
+.menuHeaderStatusLine {
+  width: 0.5078125vw;
+  height: 0;
+  border-bottom: 1px solid #1B9F01;
+  transform: rotate(180deg);
+}
+
+.menuHeaderText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  gap: 0.667vh;
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.333vh;
+  line-height: 140%;
+  text-align: center;
+  color: #56585F;
+}
+
+.menuHeaderTextTitle {
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  text-align: center;
+  color: #000000;
+}
+
+.menuHeaderButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.41667vw;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 412/46;
+}
+
+.menuHeaderButtonSupportPhone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 1.06770833vw;
+  width: calc((100% - 0.41667vw)/2);
+  height: 100%;
+  background: #1B1C1F;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.menuHeaderButtonSupportChat {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 1.06770833vw;
+  width: calc((100% - 0.41667vw)/2);
+  height: 100%;
+  background: #EEEFF3;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #1B1C1F;
+}
+
+.menuBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6667vh 1.041667vw;
+  gap: 2vh;
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  border-top: 1px solid #EEEFF3;
+  border-radius: 1.25vw;
+}
+
+.menuBodyTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 1.25vw;
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  color: #000000;
+}
+
+.menuBodyElement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.menuBodyElementTitle {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.menuBodyElementContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.667vh 1.0416667vw;
+  gap: 1.0416667vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.833vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #1B1C1F;
+}
+
+.menuBodyDeliveryPrice {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+}
+
+.menuBodyOrderPrice {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.33vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.menuBodyOrderPriceText {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.33vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #56585F;
+}
+
+
+.menuBodyTitle svg, path {
+  transition: all 0.3s ease;
+}
+

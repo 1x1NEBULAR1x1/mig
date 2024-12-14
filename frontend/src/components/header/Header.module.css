@@ -1,0 +1,747 @@
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.66667vh 2.08333vw;
+  gap: 1.5625vw;
+  max-width: 100%;
+  height: 6.9vh;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EEEFF3;
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25vw;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.71875vw;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 9.89583vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  aspect-ratio: 149/49;
+}
+
+.selectedCategory {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B9F01;
+  flex: none;
+}
+
+.category {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+  flex: none;
+}
+
+.searchIcon {
+  width: calc((1.041667vw + 1.66667vh)/2);
+  height: calc((1.041667vw + 1.66667vh)/2);
+  margin-left: -0.33vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.search {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 0.83333vw;
+  gap: 0.416667vh;
+  width: 60%;
+  height: 3.83333vh;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 1.25vw;
+  flex: none;
+}
+
+.input {
+  border: none;
+  outline: none;
+  height: 2vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.33vh;
+  line-height: 140%;
+  color: #56585F;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.LocationAndAccountContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.52083333vw;
+  width: auto;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.4166667vw;
+  width: auto;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.account {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.416667vw;
+  width: auto;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.33vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.accountExit {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.416667vw;
+  width: 100%;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loginModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6667vh 1.041667vw;
+  gap: 2vh;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.25vw;
+  z-index: 101;
+  aspect-ratio: 420/162;
+  transition: all 0.3s ease;
+}
+
+.loginModalTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.66667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalLabel {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6667vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalInputContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 0.83333vh;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 2fr 1fr;
+}
+
+.loginModalInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 0.8333vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 3.333vw;
+  box-sizing: border-box;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.67708333vw;
+  width: auto;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalVerifyingTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalVerifyingText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.333vh;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.667vh;
+  line-height: 140%;
+  color: #000000;
+}
+
+.loginModalVerifyingBack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.667vh;
+  line-height: 140%;
+  color: #1B9F01;
+}
+
+.loginModalVerifyingContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.41667vh;
+  width: auto;
+  height: auto;
+  grid-template-columns: 2fr 1fr;
+}
+
+.loginModalVerifyingInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #56585F;
+  padding: 1vh 0.8333vw;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 1.25vw;
+}
+
+.loginModalVerifyingButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingError {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #EC4646;
+}
+
+.loginModalVerifyingRetry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0.41667vw;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 1.0416667vw;
+  gap: 2vh;
+  position: absolute;
+  max-height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  width: 21.875vw;
+  height: auto;
+  left: 76.5%;
+  top: 8vh;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 42px rgba(156, 143, 132, 0.4);
+  border-radius: 1.25vw;
+  z-index: 50;
+  margin: 0;
+}
+
+.profileData {
+  margin-top: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.8333vh 0.520833vw;
+  gap: 0.833vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.8333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 120%;
+  color: #000000;
+}
+
+.profileDataPhoto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.333vh 0.833vw;
+  gap: 0.520833vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 2.5vw;
+}
+
+.profileOrders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.5vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.33vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8333vh 0.520833vw;
+  gap: 1.333vh;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.8333vw;
+  cursor: pointer;
+}
+
+.profileOrderLine {
+  width: 100%;
+  height: 0;
+  border: 0.0833vw solid #EEEFF3;
+}
+
+.profileOrderHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.833vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatusAndPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 0.20833vw;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  color: #1B9F01;
+}
+
+.profileOrderPrice {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 120%;
+  text-align: right;
+  color: #1B1C1F;
+}
+
+.profileOrderText {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  padding: 0;
+  margin-top: -1vh;
+  display: flex;
+  color: #1B1C1F;
+}
+
+.profileOrderProductList {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.8333vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderImg {
+  width: 4vh;
+  height: 4vh;
+  max-width: 46px;
+  max-height: 46px;
+  border-radius: 0.625vw;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.profileOrderImg img {
+  width: auto;
+  height: 100%;
+}
+
+.profileAction {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.667vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+  flex-direction: row;
+  padding: 0;
+  gap: 0.41667vw;
+  cursor: pointer;
+}
+
+.profileButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.41667vw;
+  width: 100%;
+  height: auto;
+}
+
+.profileButtonSupport {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  width: auto;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.profileButtonExit {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  width: auto;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.exitingModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5vh 1.5625vw;
+  gap: 2vh;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.5625vw;
+}
+
+.exitingModalText {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.exitingModalButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.416667vw;
+  width: 100%;
+  height: auto;
+}
+
+.exitingModalButtonExit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25vh 1.25vw;
+  width: calc((100% - 0.416667vw)/2);
+  height: 4.5vh;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.exitingModalButtonCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25vh 1.25vw;
+  width: calc((100% - 0.416667vw)/2);
+  height: 4.5vh;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #000000;
+}

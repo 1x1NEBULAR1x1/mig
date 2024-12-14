@@ -1,0 +1,118 @@
+.categoriesList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  margin: 0;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5625vw 2.5vh;
+  gap: 24px;
+  isolation: isolate;
+  width: 23.541666vw;
+  height: 58.083333vh;
+  background: #FFFFFF;
+  border-radius: 1.5625vw;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.categoryText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+  height: 21.75vh;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.categoryName {
+  width: 10.36458333vw;
+  height: 4vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4vh;
+  line-height: 100%;
+  color: #1B1C1F;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.categorySubcategories {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+  height: 21.75vh;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.categorySubcategory {
+  width: 100%;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 100%;
+  color: #56585F;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.categorySubcategory:hover {
+  color: #1B9F01;
+}
+
+.categoryImage {
+  width: calc((21.9791666vw + 35.166666vh)/2);
+  max-width: 21.979166vw;
+  aspect-ratio: 1/1;
+  margin-bottom: calc((21.9791666vw + 35.166666vh)/-8);
+  margin-right: calc((21.9791666vw + 35.166666vh)/-8);
+}
+.categoryLinkAndImageContainer {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: 21.75vh;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.categoryLink {/* подробнее */
+  width: 9vw;
+  height: 1.833333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333333vh;
+  line-height: 140%;
+  color: #1B9F01;
+  flex: none;
+}
