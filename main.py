@@ -2,8 +2,12 @@ from api.main import main as api_main
 from bot.main import main as bot_main
 from asyncio import new_event_loop, set_event_loop_policy, WindowsSelectorEventLoopPolicy
 from sys import platform
+import asyncio
+
 if platform == "win32":
-    set_event_loop_policy(WindowsSelectorEventLoopPolicy())
+    from asyncio import WindowsSelectorEventLoopPolicy
+    asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())
+
 
 def main():
     loop = new_event_loop()
