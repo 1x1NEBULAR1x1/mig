@@ -33,10 +33,8 @@ ar.include_router(branches_router)
 ar.include_router(settings_router)
 
 @r.get('', response_class=HTMLResponse)
-async def get_admin_panel():
+async def get_admin_panel(request: Request):
     return templates.TemplateResponse(name='index.html', request=request)
-
-
 
 @ar.get('/codes')
 async def get_codes():
