@@ -27,6 +27,7 @@ def load_routers():
     app.include_router(admin_router)
 
 app.mount(path='/assets', app=StaticFiles(directory="./frontend/dist/assets"), name="assets")
+app.mount(path='/admin', app=StaticFiles(directory="./admin_panel/dist/assets"), name="admin")
 app.mount(path='/static', app=StaticFiles(directory="static"), name="static")
 
 config = Config(app=app, host=API_HOST, port=API_PORT)

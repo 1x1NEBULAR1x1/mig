@@ -1,5 +1,4 @@
 .expo
-mobile_app
 mobile_frontend
-node_modules
 venv
+node_modules

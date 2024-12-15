@@ -240,7 +240,7 @@ class OrderHistory(Base):
 
 class Code(Base):
     __tablename__ = 'codes'
-    code: Mapped[int] = mapped_column(Integer, nullable=False, unique=True)
+    code: Mapped[int] = mapped_column(Integer, nullable=False)
     expiration: Mapped[datetime] = mapped_column(DateTime, nullable=False)
     phone_number: Mapped[str] = mapped_column(String(16), nullable=False)
     is_used: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)

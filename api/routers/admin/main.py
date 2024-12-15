@@ -19,7 +19,7 @@ from fastapi.templating import Jinja2Templates
 r = APIRouter(prefix="/admin", tags=["Admin"])
 ar = APIRouter(prefix="/admin", tags=["Admin"])
 
-r.include_router(ar)
+
 db = Database()
 templates = Jinja2Templates(directory='./admin_panel/dist')
 
@@ -54,7 +54,7 @@ async def get_codes():
         return JSONResponse(status_code=202, content=str(e))
 
 
-@ar.post('/login', response_class=JSONResponse)
+@r.post('/admin/login', response_class=JSONResponse)
 async def login(admin: Admin, response: JSONResponse):
     try:
         admin = await db.login_admin(login=admin.login, password=admin.hashed_password)
@@ -83,3 +83,5 @@ async def protected(request: Request):
     except Exception as e:
         print(e)
         return JSONResponse(status_code=202, content=str(e))
+
+r.include_router(ar)
