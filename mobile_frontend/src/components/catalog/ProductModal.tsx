@@ -45,40 +45,48 @@ const ProductModal = () => {
             <div
               className={styles.productModalLeft}
             >
-              <div
-                className={styles.productModalTags}
-              >
-                {uiStore.selectedProduct.product.tags?.map((tag) => (
-                    <div
-                      key={tag.name}
-                      className={styles.productModalTag}
-                      style={{
-                        backgroundColor: tag.firstColor,
-                        color: tag.secondColor
-                      }}
-                    >
-                      {tag.name}
-                    </div>
-                  )
-                )}
-              </div>
-              <div
-                className={styles.productModalImage}
-              >
-                <img
-                  src={url + (uiStore.selectedProduct.product.imagePath || "/static/image_not_found.png")}
-                  alt={uiStore.selectedProduct.product.name}
-                />
-              </div>
-            </div>
+							<div className={styles.productModalHeader}>
+								<div className={styles.productModalTags}>
+                  {uiStore.selectedProduct.product.tags?.map((tag) => (
+                      <div
+                        key={tag.name}
+                        className={styles.productModalTag}
+                        style={{
+                          backgroundColor: tag.firstColor,
+                          color: tag.secondColor
+                        }}
+                      >
+                        {tag.name}
+                      </div>
+                    )
+                  )}
+								</div>
+								<svg
+                  className={styles.productModalButtonClose}
+                  onClick={() => uiStore.setSelectedProduct(undefined)}
+                  width="2vh" height="2vh" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M7.41433 5.89953L11.657 1.65689L10.2428 0.242679L6.00012 4.48532L1.75748 0.242676L0.343266 1.65689L4.58591 5.89953L0.343262 10.1422L1.75748 11.5564L6.00012 7.31374L10.2428 11.5564L11.657 10.1422L7.41433 5.89953Z"
+										fill="#1B1C1F"/>
+								</svg>
+							</div>
+							<div
+								className={styles.productModalImage}
+							>
+								<img
+									src={url + (uiStore.selectedProduct.product.imagePath || "/static/image_not_found.png")}
+									alt={uiStore.selectedProduct.product.name}
+								/>
+							</div>
+						</div>
 						<div
 							className={styles.productModalRight}
 						>
-              <div
-                className={styles.productModalNameContainer}
-              >
-                <div
-                  className={styles.productModalName}
+							<div
+								className={styles.productModalNameContainer}
+							>
+								<div
+									className={styles.productModalName}
                 >
                   {uiStore.selectedProduct.product.name}
                 </div>

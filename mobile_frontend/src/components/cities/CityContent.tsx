@@ -25,11 +25,12 @@ const CityContent: FunctionComponent = () => {
           className={styles.pictureContainer}
         >
           <p className={styles.pictureText}>Выберите город</p>
-          <img
-            className={styles.pictureImage}
-            src={url + '/static/white-city.png'}
-            alt="City image"
-          />
+
+          <div className={styles.pictureImage}>
+            <img
+              src={url + '/static/white-city.png'}
+              alt="City image"
+            /></div>
         </div>
         <div
           className={styles.search}

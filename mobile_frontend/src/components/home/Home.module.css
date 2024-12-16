@@ -159,7 +159,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 1.5vh 4vw;
+  padding: 2.5vh;
   width: auto;
   height: auto;
   min-height: calc(70vh/2);
@@ -232,8 +232,8 @@
   height: 30vh;
   max-width: initial;
   aspect-ratio: 1/1;
-  margin-bottom: -7vh;
-  margin-right: -7vw;
+  margin-bottom: -8vh;
+  margin-right: -6vh;
 }
 
 .categoryLinkAndImageContainer {

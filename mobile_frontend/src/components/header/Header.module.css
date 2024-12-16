@@ -1548,18 +1548,17 @@
   background-color: white;
   width: 100%;
     height: auto;
-  position: absolute;
+  position: sticky;
   z-index: 100;
-  top: 0;
-  left: 0;
+  top: 7vh;
     padding: 2vh;
   }
   .menuOverlay {
-    position: absolute;
+    position: fixed;
     top: 6.8vh;
     left: 0;
     right: 0;
-    min-height: 40vh;
+    min-height: 100vh;
     z-index: 40;
   }
   .menuSearch {

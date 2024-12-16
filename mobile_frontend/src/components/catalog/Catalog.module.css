@@ -13,6 +13,9 @@
   transition: all 0.3s ease;
   align-items: flex-start;
 }
+.productModalButtonClose {
+  display: none;
+}
 
   .sider {
   display: flex;
@@ -623,7 +626,6 @@
   font-family: 'TT Firs Neue Trl', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.8333vh;
   line-height: 140%;
   display: flex;
   align-items: center;
@@ -665,6 +667,10 @@
   line-height: 140%;
   color: #1B1C1F;
 }
+.productAddButton svg {
+  height: 2vh;
+  width: 2vh;
+}
 
 .productAddButtons {
   display: flex;
@@ -701,6 +707,7 @@
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
+
   height: 100%;
   cursor: pointer;
 }
@@ -725,6 +732,11 @@
   cursor: pointer;
 }
 
+.productRemoveButton svg {
+  height: 1.8vh;
+  width: 1.8vh;
+}
+
 .productAmountInput {
   aspect-ratio: 1/1;
   height: 100%;
@@ -735,7 +747,7 @@
   font-family: 'TT Firs Neue Trl', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.833vh;
+  font-size: 2.2vh;
   line-height: 140%;
   text-align: center;
   color: #FFFFFF;
@@ -1064,37 +1076,40 @@
   padding: 0;
   width: calc(100vw - 2vh);
   height: auto;
-  background: #FFFFFF;
-  border-radius: 2vh;
-    margin: 0 1vh;
-  position: sticky;
+  margin: 0 1vh;
+  position: fixed;
   top: 7.5vh;
 }
 .siderSubCategoryContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0.8333vh 0.520833vw;
-  gap: 0.6666667vh;
-  width: 100%;
+  padding: 3vh 1.6vh 1.6vh 1.6vh;
+  width: 65vw;
   height: auto;
+  background-color: white;
+  border-radius: 2vh;
+  box-shadow: 4px 4px 42px #eeeeee;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.66667vh 4vw;
-  width: auto;
-  height: 8vh;
+  padding: 1.6vh 1.6vh 0 1.6vh;
+  width: 65vw;
+  gap: 0.5vh;
+  background-color: white;
+  border-radius: 2vh;
+  margin-bottom: -2.5vh;
+  z-index: 100;
 }
 .header1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   padding: 0;
-  width: 80vw;
   height: auto;
   flex: none;
   order: 0;
@@ -1106,7 +1121,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 0;
-  width: 90vw;
+  width: auto;
   height: auto;
 }
 
@@ -1190,12 +1205,12 @@
 
 .subcategory {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
   padding: 1vh 3vw;
   gap: 1vh;
-  margin: 0 2vw;
-  width: 95vw;
+  width: 100%;
   height:auto;
   background: #FFFFFF;
   border-radius: 1.2vh;
@@ -1211,7 +1226,7 @@
   height: 4vh;
   aspect-ratio: 1/1;
   background: #EEEFF3;
-  border-radius: 0.625vw;
+  border-radius: 1vh;
 }
 
 .productList {
@@ -1305,14 +1320,24 @@
   width: 100%;
   height: auto;
 }
-
+.productModalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.productModalButtonClose {
+  cursor: pointer;
+  width: 3vh;
+  height: 3vh;
+}
 .productModalTags {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0;
   gap: 2vw;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
