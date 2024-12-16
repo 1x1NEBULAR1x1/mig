@@ -1,0 +1,2145 @@
+@media (min-width: 761px) {
+.contentLong {
+  position: relative;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  width: 100%;
+  min-height: 64.8vh;
+  height: auto;
+  background: #EEEFF3;
+  display: flex;
+  justify-content: center;
+  gap: 0.4vw;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+}
+
+  .sider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 15.5208333333vw;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.25vw;
+  position: sticky;
+  top: 10.9vh;
+}
+
+
+.siderSubCategoryContainer {
+  display: flex!important;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8333vh 0.520833vw;
+  gap: 0.6666667vh;
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 1.0416667vw;
+  gap: 0.667vh;
+  width: 15.520833vw;
+  height: 12.333vh;
+}
+
+.headerButton {
+  display: none;
+}
+
+.path {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding: 0;
+  gap: 8px;
+  width: 100%;
+  height: 1.83333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5vh;
+  line-height: 100%;
+  color: #1B1C1F;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.categoryName {
+  width: 100%;
+  height: 4vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4vh;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.backLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  gap: 0.41666667vh;
+  width: 100%;
+  height: 1.83333vw;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 140%;
+  color: #1B9F01;
+  cursor: pointer;
+}
+
+.subcategory {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.6666667vh 0.625vw 0.6666667vh 0.41666667vw;
+  gap: 1vh;
+  width: 14.479166667vw;
+  height: 5.33333vh;
+  background: #FFFFFF;
+  border-radius: 0.833333vw;
+  font-size: 2vh;
+  line-height: 100%;
+  color: #1B1C1F;
+  font-weight: 500;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+.subcategoryImage {
+  width: calc((2.5vw + 4vh) / 2);
+  aspect-ratio: 1/1;
+  background: #EEEFF3;
+  border-radius: 0.625vw;
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.46875vw;
+  width: 55.677083333vw;
+  height: auto;
+}
+
+.subCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1.666667vh;
+  width: 100%;
+  height: auto;
+}
+
+.subCategoryName {
+  display: flex;
+  flex-direction: row;
+  padding: 1.3vh 1.3vw;
+  gap: 1.3333vh;
+  background: #FFFFFF;
+  border-radius: 1.25vw;
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.666667vh;
+  line-height: 120%;
+  align-items: center;
+  color: #1B9F01;
+}
+
+.subCategoryProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.3667vw;
+  margin-top: -1vh;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .subCategoryProducts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.83333vh 0.5208333vw;
+  gap: 0.5vh;
+  background: #FFFFFF;
+  border-radius: 1.25vw;
+  aspect-ratio: 260.5/540;
+  width: 100%;
+  height: 100%;
+}
+
+.productModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productModal {
+  display: flex;
+  flex-direction: row;
+  max-width: 48.75vw;
+  align-items: flex-start;
+  padding: 2.5vh 1.5625vw;
+  gap: 1.666667vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.5625vw;
+  margin: auto;
+  z-index: 10;
+}
+
+.productModalLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.productModalTags {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.208333vw;
+  width: 100%;
+  height: auto;
+}
+
+.productModalTag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vh 0.83333vw;
+  width: auto;
+  height: auto;
+  border-radius: 20vw;
+  text-align: center;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1666667vh;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.productModalImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  aspect-ratio: 1/1;
+  height: auto;
+  margin-top: 4vh;
+  object-fit: cover;
+}
+
+.productModalImage img {
+  width: 16.25vw;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  max-width: 312px;
+  min-width: 100px;
+}
+
+.productModalRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1.3333vh;
+  width: auto;
+  height: 100%;
+}
+
+.productModalNameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.productModalName {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.66667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.productModalAmount {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.66667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+}
+
+.productModalPriceAndButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0.8333vh 0.520833vw 0.8333vh 1.0416667vw;
+  gap: 0.52083333vw;
+  width: 100%;
+  height: 5.5vh;
+  background: #EEEFF3;
+  border-radius: 1.0416667vw;
+  min-width: 145px;
+}
+
+.productModalPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0;
+  gap: 0.41666667vw;
+  width: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  text-align: right;
+  color: #000000;
+  min-width: 78px;
+}
+
+.productModalPreviousPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  width: 3.125vw;
+  height: 1.6667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.16667vh;
+  line-height: 140%;
+  text-align: right;
+  color: #BDBFC9;
+  text-decoration-line: line-through;
+  min-width: 27px;
+}
+
+.productModalBuyButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.41667vw;
+  width: 7vw;
+  height: 3.8333vh;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.63333vh;
+  line-height: 140%;
+  color: #EEEFF3;
+  min-width: 55px;
+}
+
+.productModalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 150%;
+  aspect-ratio: 1/1;
+  font-size: 1.83333vh;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.productModalAmountInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vh;
+  height: 3vh;
+  aspect-ratio: 1/1;
+  font-size: 1.8333vh;
+  margin: 0 auto;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+}
+
+.productModalDescripton {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  text-align: left;
+}
+
+.productModalEnergyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.66667vh;
+  width: 100%;
+  height: 6.75vh;
+}
+
+.productModalEnergyAmountContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  gap: 2.65625vw;
+  width: auto;
+  height: 4.25vh;
+}
+
+.productModalEnergyAmountContains {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: 100%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.productModalEnergyAmountNumber {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.productModalEnergyAmountText {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.33vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.productModalProperty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.productModalPropertyTitle {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.33vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #BDBFC9;
+}
+
+.productModalPropertyContent {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.33vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+
+.productTags {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.208333vw;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1vh;
+}
+
+.productTag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vh 0.83333vw;
+  width: auto;
+  height: auto;
+  border-radius: 1.0416667vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 140%;
+}
+
+.productImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 240.5/269;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.productImage img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productName {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.677vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.productPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0.43vw;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 120%;
+  text-align: left;
+  color: #000000;
+}
+
+.productPreviousPrice {
+  width: auto;
+  height: 75%;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1667vh;
+  line-height: 140%;
+  text-align: right;
+  color: #BDBFC9;
+  text-decoration-line: line-through;
+}
+
+.productAmount {
+  width: 100%;
+  height: 1.833333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8333vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+}
+
+.productBuyButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.677vw;
+  gap: 0.41667vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  cursor: pointer;
+}
+
+.productAddButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B1C1F;
+}
+
+.productAddButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 0;
+  width: 100%;
+  height: 4.8vh;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.productAddButton {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.productAmountInCart {
+  display: flex;
+  width: 5vw;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  height: 100%;
+  cursor: pointer;
+}
+
+.productRemoveButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.677vw;
+  width: auto;
+  height: 4.8vh;
+  aspect-ratio: 1/1;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  cursor: pointer;
+}
+
+.productAmountInput {
+  aspect-ratio: 1/1;
+  height: 100%;
+  width: 5vw;
+  background: none;
+  border: none;
+  flex: 1;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.833vh;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.cart {
+  position: sticky;
+  top: 10.9vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 23.59375vw;
+  background: #FFFFFF;
+  border-radius: 1.25vw;
+}
+
+.cartHeader {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 1.0416667vw;
+  gap: 8px;
+  width: 100%;
+  height: 6.5vh;
+  border-bottom: 1px solid #EEEFF3;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.66667vh;
+  line-height: 120%;
+  color: #1B1C1F;
+}
+
+.cartButton {
+  display: none;
+}
+
+.cartBody {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8333vh 2.083333vw 0.8333vh 0.52083333vw;
+  gap: 0.66667vh;
+  width: 100%;
+  height: auto;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.cartFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 1.0416667vw;
+  gap: 1vh;
+  width: 100%;
+  height: 11.3333vh;
+  border-top: 1px solid #EEEFF3;
+}
+
+.cartValueContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 2.4166667vh;
+}
+
+.cartValueLabel {
+  width: 3.45vw;
+  height: 2.4166667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+}
+
+.cartValuePrice {
+  width: auto;
+  height: 2.4166667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.cartOrderButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25vh 1.25vw;
+  width: 100%;
+  height: 4.5833333vh;
+  background: #1B9F01;
+  border-radius: 3.33333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.cartListEmpty {
+  width: 100%;
+  display: flex;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.41667vh;
+  line-height: 140%;
+  color: #BDBFC9;
+}
+
+.cartProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.666667vh 0.625vw 0.666667vh 0.7vw;
+  gap: 1vh;
+  width: 20.98958333vw;
+  height: 10.33333vh;
+  border-radius: 0.8333vw;
+}
+
+.cartProductImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  aspect-ratio: 1/1;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cartProductImage img {
+  width: auto;
+  height: 100%;
+}
+
+.cartProductData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 0.833333vh;
+  width: 13.6979166667vw;
+  height: 100%;
+}
+
+.cartProductNameContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.33333vh;
+  line-height: 140%;
+  color: #1B1C1F;
+}
+
+.cartProductName {
+  width: calc(100% - 1.5vw);
+  height: 3.666667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.33333vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  position: relative;
+}
+
+.cartProductRemoveButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0.3125vw;
+  width: auto;
+  height: calc((0.83333vw + 1.33333vh) / 2);
+  aspect-ratio: 1/1;
+}
+
+.cartProductAmountAndPriceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0;
+  gap: 0.41667vw;
+  margin: 0 auto;
+  width: 100%;
+  height: 3.666667vh;
+}
+
+.cartProductAmountButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.666667vh 0.5208333vw;
+  gap: 0.3125vw;
+  width: 5.3125vw;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3.33333vw;
+}
+
+.cartProductAmountButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+  aspect-ratio: 1/1;
+  height: 1.33333vw;
+}
+
+.cartProductAmount {
+  margin: 0 auto;
+  width: auto;
+  height: 1.666667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.16667vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.cartProductPriceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  width: auto;
+  height: 3.666667vh;
+}
+
+.cartProductPrice {
+  width: 100%;
+  height: 2vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6666667vh;
+  line-height: 120%;
+  text-align: right;
+  color: #000000;
+}
+
+.cartProductPriceSale {
+  width: auto;
+  height: 1.6666667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.166667vh;
+  line-height: 140%;
+  text-align: right;
+  color: #BDBFC9;
+  text-decoration-line: line-through;
+}
+
+.cartProductLine {
+  width: 100%;
+  height: 0;
+  border: 0.0833333vh solid #EEEFF3;
+}
+
+}
+@media (min-width: 320px) and (max-width: 760px) {
+.contentLong {
+  position: relative;
+  width: 100%;
+  min-height: 64.8vh;
+  height: auto;
+  background: #EEEFF3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4vw;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+}
+  .sider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: calc(100vw - 2vh);
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 2vh;
+    margin: 0 1vh;
+  position: sticky;
+  top: 7.5vh;
+}
+.siderSubCategoryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8333vh 0.520833vw;
+  gap: 0.6666667vh;
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 4vw;
+  width: auto;
+  height: 8vh;
+}
+.header1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+  width: 80vw;
+  height: auto;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.header2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+  width: 90vw;
+  height: auto;
+}
+
+.path {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2vh;
+  line-height: 100%;
+  color: #1B1C1F;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.categoryName {
+  width: auto;
+  height: 2vh;
+  margin-top: 1vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vh;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.backLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+  height: auto;
+  gap: 2vw;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 140%;
+  color: #1B9F01;
+  cursor: pointer;
+}
+.backLink svg {
+  width: 1.66vh;
+  height: 1.66vh;
+}
+
+.headerButton {
+  display: flex;
+  flex-direction: row;
+  margin-top: -2vh;
+  margin-right: 1vh;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+  height: auto;
+  gap: 2vw;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 140%;
+  color: #1B9F01;
+  cursor: pointer;
+}
+
+.headerButton svg {
+  width: 2.3vh;
+  height: 2.3vh;
+}
+
+.subcategory {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 3vw;
+  gap: 1vh;
+  margin: 0 2vw;
+  width: 95vw;
+  height:auto;
+  background: #FFFFFF;
+  border-radius: 1.2vh;
+  font-size: 2.2vh;
+  line-height: 100%;
+  color: #1B1C1F;
+  font-weight: 500;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+.subcategoryImage {
+  width: 4vh;
+  height: 4vh;
+  aspect-ratio: 1/1;
+  background: #EEEFF3;
+  border-radius: 0.625vw;
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1vh;
+  min-height: 60vh;
+  width: 100%;
+  height: auto;
+}
+
+.subCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.subCategoryName {
+  display: flex;
+  flex-direction: row;
+  padding: 1.3vh 4vw;
+  gap: 1.3333vh;
+  background: #FFFFFF;
+  border-radius: 2vh;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.666667vh;
+  line-height: 120%;
+  align-items: center;
+  color: #1B9F01;
+  width: calc(100vw - 2vh);
+  margin: 0 1vh;
+}
+
+.subCategoryProducts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1vh;
+  flex-wrap: wrap;
+  padding: 0 1vh;
+}
+
+@media (max-width: 960px) {
+  .subCategoryProducts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+.productModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productModal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin:3vw;
+  padding: 2.5vh 5vw;
+  gap: 1.666667vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 2vh;
+  z-index: 10;
+}
+
+.productModalLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.productModalTags {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vw;
+  width: 100%;
+  height: auto;
+}
+
+.productModalTag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7vh 2vw;
+  width: auto;
+  height: auto;
+  border-radius: 200vw;
+  text-align: center;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.productModalImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.productModalImage img {
+  width: 60vw;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+.productModalRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1vh;
+  width: auto;
+  height: 100%;
+}
+
+.productModalNameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.productModalName {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.productModalAmount {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+}
+
+.productModalPriceAndButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1vh 3vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 1.4vh;
+}
+
+.productModalPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0;
+  gap: 2vw;
+  width: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  text-align: right;
+  color: #000000;
+  min-width: 78px;
+}
+
+.productModalPreviousPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.16667vh;
+  line-height: 140%;
+  text-align: right;
+  color: #BDBFC9;
+  text-decoration-line: line-through;
+  min-width: 27px;
+}
+
+.productModalBuyButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 3vw;
+  width: 35vw;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.productModalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 150%;
+  aspect-ratio: 1/1;
+  font-size: 1.83333vh;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.productModalButton svg {
+  width: 2vh;
+  height: 2vh;
+}
+
+.productModalAmountInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5vh;
+  height: auto;
+  aspect-ratio: 1/1;
+  font-size: 1.8333vh;
+  margin: 0 auto;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+}
+
+.productModalDescripton {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  text-align: left;
+}
+
+.productModalEnergyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+.productModalEnergyAmountContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  gap: 5vw;
+  width: auto;
+  height: auto;
+}
+
+.productModalEnergyAmountContains {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: 100%;
+}
+
+.productModalEnergyAmountNumber {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.productModalEnergyAmountText {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.33vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.productModalProperty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  font-size: 1.4vh;
+  height: auto;
+}
+
+.productModalPropertyTitle {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.66vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #BDBFC9;
+}
+
+.productModalPropertyContent {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1vh 3vw;
+  gap: 0.5vh;
+  background: #FFFFFF;
+  border-radius: 1.8vh;
+  aspect-ratio: 260.5/540;
+  width: 100%;
+  height: 100%;
+}
+.productTags {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.208333vw;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1vh;
+}
+
+.productTag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3vh 1.7vw;
+  width: auto;
+  height: auto;
+  border-radius: 15vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+}
+
+.productImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 240.5/269;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.productImage img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productName {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.677vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.productPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0.43vw;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 120%;
+  text-align: left;
+  color: #000000;
+}
+
+.productPreviousPrice {
+  width: auto;
+  height: 75%;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1667vh;
+  line-height: 140%;
+  text-align: right;
+  color: #BDBFC9;
+  text-decoration-line: line-through;
+}
+
+.productAmount {
+  width: 100%;
+  height: 1.833333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8333vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+}
+
+.productBuyButton {
+  display: flex;
+  margin-top: 0.5vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vh 1vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  cursor: pointer;
+}
+
+.productAddButtonContainer {
+  display: flex;
+  margin-top: 0.5vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 1vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B1C1F;
+}
+
+.productAddButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6vh 1vw;
+  width: 100%;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.productAddButton {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+.productModalButton svg {
+  height: 100%;
+  width: 100%;
+}
+
+.productAmountInCart {
+  display: flex;
+  width: 6vw;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.productRemoveButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh  1.2vh;
+  width:auto;
+  height: auto;
+  aspect-ratio: 1.05/1;
+  background: #EEEFF3;
+  border-radius: 50%;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  cursor: pointer;
+}
+
+.productAmountInput {
+  height: 100%;
+  width: 5vw;
+  background: none;
+  border: none;
+  flex: 1;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.833vh;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.cart {
+  position: sticky;
+  bottom: 1vh;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 1.7vh;
+}
+
+.cartHeader {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.66667vh 6vw;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #EEEFF3;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vh;
+  line-height: 120%;
+  color: #1B1C1F;
+}
+.cartButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.cartButton svg {
+  height: 2.5vh;
+  width: 2.5vh;
+}
+
+.cartBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 4vw;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  padding-top: 0.8vh;
+}
+
+.cartFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 4vw;
+  gap: 1vh;
+  width: 100%;
+  height: 11.3333vh;
+  border-top: 1px solid #EEEFF3;
+  margin-bottom: 1vh;
+}
+
+.cartValueContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.cartValueLabel {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+}
+
+.cartValuePrice {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.6vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.cartOrderButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6vh 4vw;
+  width: 100%;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 333333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.cartListEmpty {
+  width: 100%;
+  display: flex;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3vh;
+  line-height: 140%;
+  color: #BDBFC9;
+}
+
+.cartProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8333vw;
+  margin: 1vh 0;
+}
+
+.cartProductImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  height: 10vh;
+}
+
+.cartProductImage img {
+  width: auto;
+  height: 100%;
+}
+
+.cartProductData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 0.833333vh;
+  width: calc(88vw - 10vh);
+  height: 100%;
+}
+
+.cartProductNameContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B1C1F;
+}
+
+.cartProductName {
+  width: calc(100% - 1.5vw);
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.1vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  position: relative;
+}
+
+.cartProductRemoveButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1vh;
+  gap: 0.3125vw;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.cartProductRemoveButton svg {
+  width: 1.6vh;
+  height: 1.6vh;
+}
+
+.cartProductAmountAndPriceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0;
+  gap: 0.41667vw;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.cartProductAmountButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:1vh 4vw;
+  gap: 6vw;
+  width: auto;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3.33333vw;
+}
+
+.cartProductAmountButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+  aspect-ratio: 1/1;
+  height: 1.33333vw;
+}
+
+.cartProductAmountButton svg {
+  width: 1.6vh;
+  height: 1.6vh;
+}
+
+.cartProductAmount {
+  margin: 0 auto;
+  width: auto;
+  height: 1.666667vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.cartProductPriceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.cartProductPrice {
+  width: 100%;
+  height: 2vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.1vh;
+  line-height: 120%;
+  text-align: right;
+  color: #000000;
+}
+
+.cartProductPriceSale {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6vh;
+  line-height: 140%;
+  text-align: right;
+  color: #BDBFC9;
+  text-decoration-line: line-through;
+}
+
+.cartProductLine {
+  width: 100%;
+  height: 0;
+  border: 0.0833333vh solid #EEEFF3;
+}
+
+}

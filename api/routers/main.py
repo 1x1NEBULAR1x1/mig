@@ -12,7 +12,7 @@ from api.routers.user.order import r as user_order_router
 from api.routers.admin.main import r as admin_router
 from api.models.order import OrderPriorityUpdate
 
-templates = Jinja2Templates(directory='./frontend/dist')
+templates = Jinja2Templates(directory='./mobile_frontend/dist')
 
 r = APIRouter(tags=['main'])
 

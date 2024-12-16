@@ -11,6 +11,8 @@ r = APIRouter()
 db = Database()
 
 
+
+
 @r.get("/order_priorities", response_model=list[OrderPriorityRead])
 async def get_priorities(request: Request):
     try:

@@ -1,0 +1,2427 @@
+@media (min-width: 1200px){
+  .menuIcon {
+  display: none;}
+
+  .searchMenu {
+    display: flex;
+    max-width: 44vw;
+    flex-direction:column;
+    align-items: flex-start;
+    padding: 1.66667vh 1.0416667vw;
+    gap: 1vh;
+    position: absolute;
+    width: 44vw;
+    height: auto;
+    left: 28vw;
+    top: 8vh;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 42px rgba(156, 143, 132, 0.4);
+    border-radius: 1.25vw;
+    z-index: 1;
+    margin: 0;
+  }
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.66667vh 2.08333vw;
+  gap: 1.5625vw;
+  max-width: 100%;
+  width: 100%;
+  height: 6.9vh;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EEEFF3;
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25vw;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  background: #1B1C1F;
+  border-radius: 9.89583vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  aspect-ratio: 149/49;
+}
+
+.selectedCategory {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B9F01;
+  flex: none;
+}
+
+.category {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+  flex: none;
+}
+
+.searchIcon {
+  width: calc((1.041667vw + 1.66667vh) / 2);
+  height: calc((1.041667vw + 1.66667vh) / 2);
+  margin-left: -0.33vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.search {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 0.83333vw;
+  gap: 0.416667vh;
+  width: 50vw;
+  height: 3.83333vh;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 120vh;
+  flex: none;
+}
+
+.input {
+  border: none;
+  outline: none;
+  height: 2vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.33vh;
+  line-height: 140%;
+  color: #56585F;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.LocationAndAccountContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.52083333vw;
+  width: auto;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.4166667vw;
+  width: auto;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.account {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.416667vw;
+  width: auto;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.33vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.accountExit {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.416667vw;
+  width: 100%;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loginModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6667vh 1.041667vw;
+  gap: 2vh;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.25vw;
+  z-index: 101;
+  aspect-ratio: 420/162;
+  transition: all 0.3s ease;
+}
+
+.loginModalTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.66667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalLabel {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6667vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalInputContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 0.83333vh;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 2fr 1fr;
+}
+
+.loginModalInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 0.8333vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 3.333vw;
+  box-sizing: border-box;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.67708333vw;
+  width: auto;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalVerifyingTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalVerifyingText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.333vh;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.667vh;
+  line-height: 140%;
+  color: #000000;
+}
+
+.loginModalVerifyingBack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.667vh;
+  line-height: 140%;
+  color: #1B9F01;
+}
+
+.loginModalVerifyingContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.41667vh;
+  width: auto;
+  height: auto;
+  grid-template-columns: 2fr 1fr;
+}
+
+.loginModalVerifyingInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #56585F;
+  padding: 1vh 0.8333vw;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 1.25vw;
+}
+
+.loginModalVerifyingButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingError {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #EC4646;
+}
+
+.loginModalVerifyingRetry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0.41667vw;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 1.0416667vw;
+  gap: 2vh;
+  position: absolute;
+  max-height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  width: 21.875vw;
+  height: auto;
+  left: 76.5%;
+  top: 8vh;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 42px rgba(156, 143, 132, 0.4);
+  border-radius: 1.25vw;
+  z-index: 50;
+  margin: 0;
+}
+
+.profileData {
+  margin-top: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.8333vh 0.520833vw;
+  gap: 0.833vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.8333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 120%;
+  color: #000000;
+}
+
+.profileDataPhoto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.333vh 0.833vw;
+  gap: 0.520833vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 2.5vw;
+}
+
+.profileOrders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.5vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.33vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8333vh 0.520833vw;
+  gap: 1.333vh;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.8333vw;
+  cursor: pointer;
+}
+
+.profileOrderLine {
+  width: 100%;
+  height: 0;
+  border: 0.0833vw solid #EEEFF3;
+}
+
+.profileOrderHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.833vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatusAndPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 0.20833vw;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  color: #1B9F01;
+}
+
+.profileOrderPrice {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 120%;
+  text-align: right;
+  color: #1B1C1F;
+}
+
+.profileOrderText {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  padding: 0;
+  margin-top: -1vh;
+  display: flex;
+  color: #1B1C1F;
+}
+
+.profileOrderProductList {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.8333vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderImg {
+  width: 4vh;
+  height: 4vh;
+  max-width: 46px;
+  max-height: 46px;
+  border-radius: 0.625vw;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.profileOrderImg img {
+  width: auto;
+  height: 100%;
+}
+
+.profileAction {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.667vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+  flex-direction: row;
+  padding: 0;
+  gap: 0.41667vw;
+  cursor: pointer;
+}
+
+.profileButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.41667vw;
+  width: 100%;
+  height: auto;
+}
+
+.profileButtonSupport {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  width: auto;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.profileButtonExit {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  width: auto;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.exitingModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5vh 1.5625vw;
+  gap: 2vh;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.5625vw;
+}
+
+.exitingModalText {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.exitingModalButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.416667vw;
+  width: 100%;
+  height: auto;
+}
+
+.exitingModalButtonExit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25vh 1.25vw;
+  width: calc((100% - 0.416667vw) / 2);
+  height: 4.5vh;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.exitingModalButtonCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25vh 1.25vw;
+  width: calc((100% - 0.416667vw) / 2);
+  height: 4.5vh;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #000000;
+}
+
+}
+
+@media (min-width: 760px) and (max-width: 1199px){
+  .menuIcon {
+  display: none;}
+  .searchMenu {
+    display: flex;
+    max-width: 44vw;
+    flex-direction:column;
+    align-items: flex-start;
+    padding: 1.66667vh 1.0416667vw;
+    gap: 1vh;
+    position: absolute;
+    width: 44vw;
+    height: auto;
+    left: 28vw;
+    top: 8vh;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 42px rgba(156, 143, 132, 0.4);
+    border-radius: 1.25vw;
+    z-index: 1;
+    margin: 0;
+  }
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.66667vh 2.08333vw;
+  gap: 1.5625vw;
+  max-width: 100%;
+  width: 100%;
+  height: 6.9vh;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EEEFF3;
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25vw;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  background: #1B1C1F;
+  border-radius: 9.89583vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  aspect-ratio: 149/49;
+}
+
+.selectedCategory {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B9F01;
+  flex: none;
+}
+
+.category {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+  flex: none;
+}
+
+.searchIcon {
+  width: calc((1.041667vw + 1.66667vh) / 2);
+  height: calc((1.041667vw + 1.66667vh) / 2);
+  margin-left: -0.33vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.search {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 0.83333vw;
+  gap: 0.416667vh;
+  width: 25vw;
+  height: 3.83333vh;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 120vh;
+  flex: none;
+}
+
+.input {
+  border: none;
+  outline: none;
+  height: 2vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.33vh;
+  line-height: 140%;
+  color: #56585F;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.LocationAndAccountContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.52083333vw;
+  width: auto;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.4166667vw;
+  width: auto;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.account {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.416667vw;
+  width: auto;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.33vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.accountExit {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  gap: 0.416667vw;
+  width: 100%;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loginModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6667vh 1.041667vw;
+  gap: 2vh;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.25vw;
+  z-index: 101;
+  aspect-ratio: 420/162;
+  transition: all 0.3s ease;
+}
+
+.loginModalTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.66667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalLabel {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6667vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalInputContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 0.83333vh;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 2fr 1fr;
+}
+
+.loginModalInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 0.8333vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 3.333vw;
+  box-sizing: border-box;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.67708333vw;
+  width: auto;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalVerifyingTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.667vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalVerifyingText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.333vh;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.667vh;
+  line-height: 140%;
+  color: #000000;
+}
+
+.loginModalVerifyingBack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.667vh;
+  line-height: 140%;
+  color: #1B9F01;
+}
+
+.loginModalVerifyingContainer {
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.41667vh;
+  width: auto;
+  height: auto;
+  grid-template-columns: 2fr 1fr;
+}
+
+.loginModalVerifyingInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.833vh;
+  line-height: 140%;
+  color: #56585F;
+  padding: 1vh 0.8333vw;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 1.25vw;
+}
+
+.loginModalVerifyingButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingError {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #EC4646;
+}
+
+.loginModalVerifyingRetry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0.41667vw;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.333vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.66667vh 1.0416667vw;
+  gap: 2vh;
+  position: absolute;
+  max-height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  width: 21.875vw;
+  height: auto;
+  left: 76.5%;
+  top: 8vh;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 42px rgba(156, 143, 132, 0.4);
+  border-radius: 1.25vw;
+  z-index: 50;
+  margin: 0;
+}
+
+.profileData {
+  margin-top: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.8333vh 0.520833vw;
+  gap: 0.833vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.8333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 120%;
+  color: #000000;
+}
+
+.profileDataPhoto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.333vh 0.833vw;
+  gap: 0.520833vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 2.5vw;
+}
+
+.profileOrders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.5vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.33vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.8333vh 0.520833vw;
+  gap: 1.333vh;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 0.8333vw;
+  cursor: pointer;
+}
+
+.profileOrderLine {
+  width: 100%;
+  height: 0;
+  border: 0.0833vw solid #EEEFF3;
+}
+
+.profileOrderHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.833vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatusAndPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 0.20833vw;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  color: #1B9F01;
+}
+
+.profileOrderPrice {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6667vh;
+  line-height: 120%;
+  text-align: right;
+  color: #1B1C1F;
+}
+
+.profileOrderText {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3333vh;
+  line-height: 140%;
+  padding: 0;
+  margin-top: -1vh;
+  display: flex;
+  color: #1B1C1F;
+}
+
+.profileOrderProductList {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.8333vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderImg {
+  width: 4vh;
+  height: 4vh;
+  max-width: 46px;
+  max-height: 46px;
+  border-radius: 0.625vw;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.profileOrderImg img {
+  width: auto;
+  height: 100%;
+}
+
+.profileAction {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.667vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+  flex-direction: row;
+  padding: 0;
+  gap: 0.41667vw;
+  cursor: pointer;
+}
+
+.profileButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.41667vw;
+  width: 100%;
+  height: auto;
+}
+
+.profileButtonSupport {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  width: auto;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.profileButtonExit {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0.6770833vw;
+  width: auto;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.exitingModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5vh 1.5625vw;
+  gap: 2vh;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 1.5625vw;
+}
+
+.exitingModalText {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.exitingModalButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.416667vw;
+  width: 100%;
+  height: auto;
+}
+
+.exitingModalButtonExit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25vh 1.25vw;
+  width: calc((100% - 0.416667vw) / 2);
+  height: 4.5vh;
+  background: #1B9F01;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.exitingModalButtonCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25vh 1.25vw;
+  width: calc((100% - 0.416667vw) / 2);
+  height: 4.5vh;
+  background: #EEEFF3;
+  border-radius: 3.333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  color: #000000;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 759px) {
+  .menu {
+   display: flex;
+    flex-direction: column;
+  background-color: white;
+  width: 100%;
+    height: auto;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+    padding: 2vh;
+  }
+  .menuOverlay {
+    position: absolute;
+    top: 6.8vh;
+    left: 0;
+    right: 0;
+    min-height: 40vh;
+    z-index: 40;
+  }
+  .menuSearch {
+    display: flex;
+    width: 100%;
+    height: 5vh;
+
+    border: 1px solid #BDBFC9;
+    border-radius: 50vh;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vh 0.83333vw;
+    gap: 0.416667vh;
+    background: #FFFFFF;
+    flex: none;
+  }
+
+  .searchMenuOverlay {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+  }
+  .searchMenu {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    padding: 1.66667vh 1.0416667vw;
+    gap: 1vh;
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    top: -5vh;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(156, 143, 132, 0.4);
+    border-radius: 1.25vw;
+    z-index: 1000;
+    margin: 0;
+  }
+  .searchProductName {
+  color: #56585F;      /* Equivalent to text-[#56585F] */
+  height: auto;
+  width: 70vw;
+  display: flex;       /* Equivalent to flex */
+  align-items: center; /* Equivalent to items-center */
+  font-weight: bold;
+    font-size: 2vh;
+  }
+  .searchProductImage{
+    height: 7vh;
+    width: 7vh;
+    border-radius: 0.75rem; /* Equivalent to rounded-xl */
+    object-fit: contain;    /* Equivalent to object-contain */
+    display: flex;          /* Equivalent to flex */
+    justify-content: center; /* Equivalent to justify-center */
+    align-items: center;
+  }
+  .searchProduct {
+    height: 7vh;
+    padding-left: 4vw;
+    border-radius: 0.75rem; /* Equivalent to rounded-xl */
+    margin-right: 0.5rem;   /* Equivalent to mr-2 */
+    object-fit: contain;    /* Equivalent to object-contain */
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+  }
+
+  .menuCategories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 1.25vh;
+    width: 100%;
+    height: auto;
+    padding-top: 2vh;
+  }
+  .menuIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4166667vw;
+  width: 5vh;
+    margin-top: -0.5vh;
+  aspect-ratio: 1.05/1;
+  height: 5vh;
+  background: #EEEFF3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.selectedCategory {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B9F01;
+  flex: none;
+}
+
+.category {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #56585F;
+  flex: none;
+}
+
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.66667vh 2.08333vw;
+  max-width: 100vw;
+  width: 100vw;
+  height: 6.9vh;
+  background: #FFFFFF;
+  border-bottom: 1px solid #EEEFF3;
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.categories {
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25vw;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  background: #1B1C1F;
+  border-radius: 9.89583vw;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  aspect-ratio: 149/49;
+}
+
+.searchIcon {
+  width: 2.5vh;
+  height: 2.5vh;
+  margin-left: 1vh;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.search {
+  box-sizing: border-box;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 0.83333vw;
+  gap: 0.416667vh;
+  width: 25vw;
+  height: 3.83333vh;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 120vh;
+  flex: none;
+}
+
+.input {
+  border: none;
+  outline: none;
+  height: 2vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #56585F;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.LocationAndAccountContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vw;
+  width: auto;
+  height: 100%;
+  margin-left: 4vw;
+}
+
+
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 2vw;
+  gap: 1vw;
+  width: auto;
+  height: 4.6vh;
+  margin-top: -0.3vh;
+  background: #EEEFF3;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.account {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 3vw;
+  gap: 0.416667vw;
+  width: auto;
+  height: 4.6vh;
+  margin-top: -0.3vh;
+  background: #1B9F01;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.accountExit {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 2.5vw;
+  gap: 1vw;
+  width: 100%;
+  height: 4.6vh;
+  margin-top: -0.3vh;
+  background: #1B1C1F;
+  border-radius: 100px;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loginModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2vh 5vw;
+  gap: 3vh;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 3vh;
+  z-index: 101;
+  aspect-ratio: 420/162;
+  transition: all 0.3s ease;
+}
+
+.loginModalTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalLabel {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalInputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 2vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.33vh 3vw;
+  width: 80vw;
+  height: auto;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 3.333vh;
+  box-sizing: border-box;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.33vh 2vw;
+  width: 80vw;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 3.333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.loginModalVerifyingTitle {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.3vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.loginModalVerifyingText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.333vh;
+  width: 80vw;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #000000;
+}
+
+.loginModalVerifyingBack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vh;
+  line-height: 140%;
+  color: #1B9F01;
+}
+
+.loginModalVerifyingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2vh;
+  width: auto;
+  height: auto;
+}
+
+.loginModalVerifyingInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80vw;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #56585F;
+  padding: 1.5vh 4vw;
+  background: #FFFFFF;
+  border: 1px solid #BDBFC9;
+  border-radius: 50vh;
+}
+
+.loginModalVerifyingButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3vh 0.6770833vw;
+  height: auto;
+  width: 80vw;
+  background: #1B9F01;
+  border-radius: 333vw;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.loginModalVerifyingError {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #EC4646;
+}
+
+.loginModalVerifyingRetry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 2vw;
+  margin-top: 1vh;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8vh;
+  line-height: 140%;
+  color: #56585F;
+}
+
+.loginModalVerifyingRetry svg {
+  width: 1.8vh;
+  height: 1.8vh;
+  color: #56585F;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2vh 3vw;
+  gap: 1.5vh;
+  position: absolute;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 4px rgba(156, 143, 132, 0.4);
+  border-radius: 1.6vh;
+  z-index: 11110;
+  margin: 0;
+}
+
+.profileData {
+  margin-top: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1vh 3vw;
+  gap: 0.833vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 120%;
+  color: #000000;
+}
+
+.profileDataPhoto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2vh;
+  gap: 0.520833vw;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 2222vw;
+}
+.profileDataPhoto svg {
+  width: 2vh;
+  height: 2vh;
+  color: #1B9F01;
+}
+
+.profileOrders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0.33vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1vh 2vw;
+  gap: 1.333vh;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 1.5vh;
+  cursor: pointer;
+}
+
+.profileOrderLine {
+  width: 100%;
+  height: 0;
+  border: 0.0833vw solid #EEEFF3;
+}
+
+.profileOrderHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1.3vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatusAndPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 2vw;
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.7vh;
+  line-height: 120%;
+  color: #1B9F01;
+}
+
+.profileOrderPrice {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.3vh;
+  line-height: 120%;
+  text-align: right;
+  color: #1B1C1F;
+}
+
+.profileOrderText {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.66vh;
+  line-height: 140%;
+  padding: 0;
+  margin-top: -1vh;
+  display: flex;
+  color: #1B1C1F;
+}
+
+.profileOrderProductList {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 1vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileOrderImg {
+  width: 6vh;
+  height: 6vh;
+  padding: 3px;
+  border-radius: 1.2vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.3vh;
+  line-height: 140%;
+  color: #56585F;
+  object-fit: contain;
+}
+
+.profileOrderImg img {
+  width: auto;
+  height: 100%;
+}
+
+.profileAction {
+  width: auto;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+  flex-direction: row;
+  padding: 0;
+  gap: 2vw;
+  cursor: pointer;
+}
+
+.profileAction svg {
+  width: 2.5vh;
+  height: 2.5vh;
+}
+
+.profileButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 1.3vh;
+  width: 100%;
+  height: auto;
+}
+
+.profileButtonSupport {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 4vw;
+  width: 100%;
+  height: auto;
+  background: #1B1C1F;
+  border-radius: 3333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.profileButtonExit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 4vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #1B1C1F;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.exitingModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5vh 5vw;
+  gap: 2vh;
+  width: 100%;
+  margin: 4vw;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 2vh;
+}
+
+.exitingModalText {
+  width: 100%;
+  height: auto;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3vh;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  color: #1B1C1F;
+}
+
+.exitingModalButtonContainer {
+  display: flex;
+  margin-top: 2vh;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 1.3vh;
+  width: 100%;
+  height: auto;
+}
+
+.exitingModalButtonExit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 1.25vw;
+  width: 100%;
+  height: auto;
+  background: #1B9F01;
+  border-radius: 333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #EEEFF3;
+}
+
+.exitingModalButtonCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 1.25vw;
+  width: 100%;
+  height: auto;
+  background: #EEEFF3;
+  border-radius: 3333vh;
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5vh;
+  line-height: 140%;
+  color: #000000;
+}
+
+}

@@ -15,8 +15,12 @@ from database.engine import Database
 from api.routers.access_token import create_access_token, check_admin_token
 from datetime import timedelta
 from fastapi.templating import Jinja2Templates
+from api.models.category import CategoryRead
+from api.models.city import CityRead
+from api.models.order import OrderPriorityUpdate, OrderPriorityRead
+from fastapi.encoders import jsonable_encoder
 
-r = APIRouter(prefix="/admin", tags=["Admin"])
+r = APIRouter(prefix="/panel", tags=["Admin"])
 ar = APIRouter(prefix="/admin", tags=["Admin"])
 
 
@@ -31,6 +35,40 @@ ar.include_router(products_router)
 ar.include_router(orders_router)
 ar.include_router(branches_router)
 ar.include_router(settings_router)
+
+@r.get("/categories", response_class=JSONResponse, response_model=list[CategoryRead])
+async def get_categories():
+    try:
+        categories = await db.get_categories()
+        return jsonable_encoder(CategoryRead.model_validate(category) for category in categories)
+    except Exception as e:
+        raise e
+        return JSONResponse(status_code=200, content=str(e))
+
+@r.get("/cities", response_class=JSONResponse, response_model=list[CityRead])
+async def get_cities():
+    try:
+        cities = await db.get_cities()
+        return [CityRead.model_validate(city) for city in cities]
+    except Exception as e:
+        raise e
+        return JSONResponse(status_code=200, content=str(e))
+
+@r.get("/order_priorities", response_class=JSONResponse, response_model=list[OrderPriorityUpdate])
+async def get_orders_priorities():
+    try:
+        priorities = await db.get_order_priorities()
+        return [OrderPriorityUpdate.model_validate(priority) for priority in priorities]
+    except Exception as e:
+        raise e
+        return JSONResponse(status_code=200, content=str(e))
+@r.get('/tax')
+async def get_tax() -> float:
+    try:
+        tax = await db.get_tax()
+        return JSONResponse(status_code=200, content={"tax": float(tax.tax)})
+    except Exception as e:
+        return JSONResponse(status_code=200, content={"error": str(e)})
 
 @r.get('', response_class=HTMLResponse)
 async def get_admin_panel(request: Request):

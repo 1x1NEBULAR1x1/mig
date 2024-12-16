@@ -2,26 +2,16 @@ import classes from "../Classes.module.css"
 import {useNavigationStore} from "../stores/useNavigationStore.ts";
 import axios from "axios";
 import {url} from "../requests/url.ts";
-import {useEffect, useState} from "react";
-import {getCodes} from "../requests/users.ts";
-
 const Home = () => {
 
   const navStore = useNavigationStore(state => state)
-  const [codes, setCodes] = useState<{code: string, is_used: boolean, phone_number: string}[]>([])
 
   const loginRequest = async () => {
-    const {status} = await axios.post(url + '/admin/login', navStore.loginData, {withCredentials: true})
+    const {status} = await axios.post(url + 'admin/login', navStore.loginData, {withCredentials: true})
     if (status === 200) {
       navStore.setIsLogined(true)
     }
   }
-
-  useEffect(() => {
-    if (navStore.isLogined) {
-       getCodes().then(codes => setCodes(codes))
-    }
-  }, [navStore.isLogined]);
 
   return (
     <div className={classes.content}>
@@ -60,11 +50,6 @@ const Home = () => {
           >
             Выйти
           </div>
-          {codes && <div className={classes.menu}>
-            {codes && codes.map(code =>
-              <div className={classes.name}>{code.phone_number} - {code.code} - used: {code.is_used}</div>)
-            }
-          </div>}
         </div>}
     </div>
   )
