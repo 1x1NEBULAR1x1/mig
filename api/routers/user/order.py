@@ -128,11 +128,11 @@ async def create_order(order: OrderCreate, request: Request):
                 amount=product.amount,
                 branch_id=branch.id
             )
-
+            branch_product = await db.get_branch_product(branch_id=branch.id, product_id=product.product_id)
+            await db.update_branch_product(id=order_product.id, amount=branch_product.amount - order_product.amount)
             total_price += float(order_product.amount) * float(order_product.product.price)
 
         await db.update_order(id=order_.id, total_price=total_price)
-
         order = await db.get_order(id=order_.id)
         order_data = jsonable_encoder(OrderRead.model_validate(order))
         await send_order_request(order=order)

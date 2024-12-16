@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from uvicorn.server import Server, Config
 from asyncio import new_event_loop
 from config import API_HOST, API_PORT
+from database.fill_database import add_branches
 from database.schema import Admin
 from database.engine import Database
 
@@ -60,6 +61,10 @@ async def main():
         await add_priorities()
     except Exception as e:
        print(e)
+    try:
+        await add_branches()
+    except Exception as e:
+        print(e)
 
 
     await server.serve()

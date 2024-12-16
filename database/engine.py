@@ -250,7 +250,12 @@ class Database:
         async with self.ssn() as ssn:
             return await ssn.scalar(select(City).where(or_(City.id == id, City.name == name)))
 
-    async def get_cities(self, is_available: bool = True, page: int = None, limit: int = 25) -> Sequence[City]:
+    async def get_cities(
+        self,
+        is_available: bool = None,
+        page: int = None,
+        limit: int = 25
+    ) -> Sequence[City]:
         async with self.ssn() as ssn:
             query = select(City)
             if page is not None:

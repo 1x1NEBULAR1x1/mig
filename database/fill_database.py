@@ -7,191 +7,6 @@ from datetime import datetime, timedelta
 
 categories = [
     {
-        "name": "Аптека",
-        "id": 0,
-        "image_path": "/static/apteka.png",
-        "sub_categories": [
-            {
-                "id": 0,
-                "name": "Лекарственные препараты",
-                "image_path": "/static/medicine.png",
-                "category_id": 0,
-                "products": [
-                    {
-                        "id": 0,
-                        "name": "Парацетамол 500мг",
-                        "price": 150,
-                        "amount": 10,
-                        "unit_of_measure": "таблетки",
-                        "tags": [
-                            {
-                                "id": 1,
-                                "name": "Акция",
-                                "first_color": "#1B9F01",
-                                "second_color": "#FFFFFF"
-                            }
-                        ],
-                        "is_available": True,
-                        "description": "Обезболивающее и жаропонижающее средство.",
-                        "image_path": "/static/medicine1.png",
-                        "compound": "Парацетамол",
-                        "expiration": "24 месяца",
-                        "storage": "При температуре не выше 25°C",
-                        "manufacturer": "ООО Препарат, Россия",
-                        "previous_price": 180
-                    },
-                    {
-                        "id": 1,
-                        "name": "Ибупрофен 200мг",
-                        "price": 120,
-                        "amount": 10,
-                        "unit_of_measure": "таблетки",
-                        "tags": [
-                            {
-                                "id": 0,
-                                "name": "Популярное",
-                                "first_color": "#EEEFF3",
-                                "second_color": "#1B1C1F"
-                            }
-                        ],
-                        "is_available": True,
-                        "description": "Обезболивающее и противовоспалительное средство.",
-                        "image_path": "/static/medicine2.png",
-                        "compound": "Ибупрофен",
-                        "expiration": "18 месяцев",
-                        "storage": "При температуре не выше 25°C",
-                        "manufacturer": "ООО Препарат, Россия",
-                        "previous_price": 150
-                    }
-                ]
-            },
-            {
-                "id": 1,
-                "name": "Товары для здоровья",
-                "image_path": "/static/health_products.png",
-                "category_id": 0,
-                "products": [
-                    {
-                        "id": 0,
-                        "name": "Витамины для иммунитета",
-                        "price": 300,
-                        "amount": 30,
-                        "unit_of_measure": "капсулы",
-                        "tags": [
-                            {
-                                "id": 1,
-                                "name": "Акция",
-                                "first_color": "#1B9F01",
-                                "second_color": "#FFFFFF"
-                            }
-                        ],
-                        "is_available": True,
-                        "description": "Комплекс витаминов для поддержания иммунной системы.",
-                        "image_path": "/static/health1.png",
-                        "compound": "Витамины C, D3, E, цинк",
-                        "expiration": "12 месяцев",
-                        "storage": "При температуре не выше 30°C",
-                        "manufacturer": "ООО Здоровье, Россия",
-                        "previous_price": 350
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "name": "Уход за кожей и волосами",
-                "image_path": "/static/skin_hair.png",
-                "category_id": 0,
-                "products": [
-                    {
-                        "id": 0,
-                        "name": "Крем для лица с SPF 50",
-                        "price": 450,
-                        "amount": 50,
-                        "unit_of_measure": "мл",
-                        "tags": [
-                            {
-                                "id": 1,
-                                "name": "Акция",
-                                "first_color": "#1B9F01",
-                                "second_color": "#FFFFFF"
-                            }
-                        ],
-                        "is_available": True,
-                        "description": "Крем с высоким уровнем защиты от солнца.",
-                        "image_path": "/static/skin1.png",
-                        "compound": "УФ-фильтры, витамин E, алоэ вера",
-                        "expiration": "18 месяцев",
-                        "storage": "При температуре не выше 25°C",
-                        "manufacturer": "ООО Красота, Россия",
-                        "previous_price": 500
-                    }
-                ]
-            },
-            {
-                "id": 3,
-                "name": "Товары для детей",
-                "image_path": "/static/kids_products.png",
-                "category_id": 0,
-                "products": [
-                    {
-                        "id": 0,
-                        "name": "Детский сироп от кашля",
-                        "price": 250,
-                        "amount": 150,
-                        "unit_of_measure": "мл",
-                        "tags": [
-                            {
-                                "id": 0,
-                                "name": "Популярное",
-                                "first_color": "#EEEFF3",
-                                "second_color": "#1B1C1F"
-                            }
-                        ],
-                        "is_available": True,
-                        "description": "Сироп для лечения кашля у детей.",
-                        "image_path": "/static/kids1.png",
-                        "compound": "Экстракт липы, мёд, витамин C",
-                        "expiration": "12 месяцев",
-                        "storage": "При температуре не выше 25°C",
-                        "manufacturer": "ООО Здоровье, Россия",
-                        "previous_price": 300
-                    }
-                ]
-            },
-            {
-                "id": 4,
-                "name": "Средства личной гигиены",
-                "image_path": "/static/hygiene.png",
-                "category_id": 0,
-                "products": [
-                    {
-                        "id": 0,
-                        "name": "Шампунь для волос 250мл",
-                        "price": 200,
-                        "amount": 250,
-                        "unit_of_measure": "мл",
-                        "tags": [
-                            {
-                                "id": 1,
-                                "name": "Акция",
-                                "first_color": "#1B9F01",
-                                "second_color": "#FFFFFF"
-                            }
-                        ],
-                        "is_available": True,
-                        "description": "Шампунь для ухода за волосами.",
-                        "image_path": "/static/hygiene1.png",
-                        "compound": "Экстракты трав, витамин B5",
-                        "expiration": "12 месяцев",
-                        "storage": "При температуре не выше 25°C",
-                        "manufacturer": "ООО Красота, Россия",
-                        "previous_price": 250
-                    }
-                ]
-            }
-        ]
-    },
-    {
         'name': 'Алкоголь',
         'id': 1,
         'image_path': '/static/alkogol.png',
@@ -869,84 +684,200 @@ categories = [
         'id': 3,
         'image_path': '/static/tabak.png'
     },
-]
-
-
-cities = [
     {
-        'name': 'Москва',
-        'branches': [
+        "name": "Аптека",
+        "id": 0,
+        "image_path": "/static/apteka.png",
+        "sub_categories": [
             {
-                'name': 'Москва Центр',
-                'address': {
-                    'street': 'Красная площадь',
-                    'house': '1',
-                    'floor': '1',
-                    'flat': '1',
-                    'entrance': '1',
-                    'latitude': 55.753215,
-                    'longitude': 37.622504
-                },
-                'products': [
+                "id": 0,
+                "name": "Лекарственные препараты",
+                "image_path": "/static/medicine.png",
+                "category_id": 0,
+                "products": [
                     {
-                        'product_id': 12,
-                        'amount': 10,
+                        "id": 0,
+                        "name": "Парацетамол 500мг",
+                        "price": 150,
+                        "amount": 10,
+                        "unit_of_measure": "таблетки",
+                        "tags": [
+                            {
+                                "id": 1,
+                                "name": "Акция",
+                                "first_color": "#1B9F01",
+                                "second_color": "#FFFFFF"
+                            }
+                        ],
+                        "is_available": True,
+                        "description": "Обезболивающее и жаропонижающее средство.",
+                        "image_path": "/static/medicine1.png",
+                        "compound": "Парацетамол",
+                        "expiration": "24 месяца",
+                        "storage": "При температуре не выше 25°C",
+                        "manufacturer": "ООО Препарат, Россия",
+                        "previous_price": 180
                     },
                     {
-                        'product_id': 4,
-                        'amount': 10,
-                    },
-                    {
-                        'product_id': 8,
-                        'amount': 5,
-                    },
-                    {
-                        'product_id': 9,
-                        'amount': 5,
-                    },
-                    {
-                        'product_id': 5,
-                        'amount': 3,
-                    },
+                        "id": 1,
+                        "name": "Ибупрофен 200мг",
+                        "price": 120,
+                        "amount": 10,
+                        "unit_of_measure": "таблетки",
+                        "tags": [
+                            {
+                                "id": 0,
+                                "name": "Популярное",
+                                "first_color": "#EEEFF3",
+                                "second_color": "#1B1C1F"
+                            }
+                        ],
+                        "is_available": True,
+                        "description": "Обезболивающее и противовоспалительное средство.",
+                        "image_path": "/static/medicine2.png",
+                        "compound": "Ибупрофен",
+                        "expiration": "18 месяцев",
+                        "storage": "При температуре не выше 25°C",
+                        "manufacturer": "ООО Препарат, Россия",
+                        "previous_price": 150
+                    }
                 ]
             },
             {
-                'name': 'Москва Север',
-                'address': {
-                    'street': 'asdasda',
-                    'house': '12',
-                    'floor': '12',
-                    'flat': '12',
-                    'entrance': '12',
-                    'latitude': 55.751215,
-                    'longitude': 37.612504
-                },
-                'products': [
+                "id": 1,
+                "name": "Товары для здоровья",
+                "image_path": "/static/health_products.png",
+                "category_id": 0,
+                "products": [
                     {
-                        'product_id': 11,
-                        'amount': 10,
-                    },
+                        "id": 0,
+                        "name": "Витамины для иммунитета",
+                        "price": 300,
+                        "amount": 30,
+                        "unit_of_measure": "капсулы",
+                        "tags": [
+                            {
+                                "id": 1,
+                                "name": "Акция",
+                                "first_color": "#1B9F01",
+                                "second_color": "#FFFFFF"
+                            }
+                        ],
+                        "is_available": True,
+                        "description": "Комплекс витаминов для поддержания иммунной системы.",
+                        "image_path": "/static/health1.png",
+                        "compound": "Витамины C, D3, E, цинк",
+                        "expiration": "12 месяцев",
+                        "storage": "При температуре не выше 30°C",
+                        "manufacturer": "ООО Здоровье, Россия",
+                        "previous_price": 350
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Уход за кожей и волосами",
+                "image_path": "/static/skin_hair.png",
+                "category_id": 0,
+                "products": [
                     {
-                        'product_id': 10,
-                        'amount': 10,
-                    },
+                        "id": 0,
+                        "name": "Крем для лица с SPF 50",
+                        "price": 450,
+                        "amount": 50,
+                        "unit_of_measure": "мл",
+                        "tags": [
+                            {
+                                "id": 1,
+                                "name": "Акция",
+                                "first_color": "#1B9F01",
+                                "second_color": "#FFFFFF"
+                            }
+                        ],
+                        "is_available": True,
+                        "description": "Крем с высоким уровнем защиты от солнца.",
+                        "image_path": "/static/skin1.png",
+                        "compound": "УФ-фильтры, витамин E, алоэ вера",
+                        "expiration": "18 месяцев",
+                        "storage": "При температуре не выше 25°C",
+                        "manufacturer": "ООО Красота, Россия",
+                        "previous_price": 500
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Товары для детей",
+                "image_path": "/static/kids_products.png",
+                "category_id": 0,
+                "products": [
                     {
-                        'product_id': 8,
-                        'amount': 5,
-                    },
+                        "id": 0,
+                        "name": "Детский сироп от кашля",
+                        "price": 250,
+                        "amount": 150,
+                        "unit_of_measure": "мл",
+                        "tags": [
+                            {
+                                "id": 0,
+                                "name": "Популярное",
+                                "first_color": "#EEEFF3",
+                                "second_color": "#1B1C1F"
+                            }
+                        ],
+                        "is_available": True,
+                        "description": "Сироп для лечения кашля у детей.",
+                        "image_path": "/static/kids1.png",
+                        "compound": "Экстракт липы, мёд, витамин C",
+                        "expiration": "12 месяцев",
+                        "storage": "При температуре не выше 25°C",
+                        "manufacturer": "ООО Здоровье, Россия",
+                        "previous_price": 300
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Средства личной гигиены",
+                "image_path": "/static/hygiene.png",
+                "category_id": 0,
+                "products": [
                     {
-                        'product_id': 2,
-                        'amount': 5,
-                    },
-                    {
-                        'product_id': 6,
-                        'amount': 3,
-                    },
+                        "id": 0,
+                        "name": "Шампунь для волос 250мл",
+                        "price": 200,
+                        "amount": 250,
+                        "unit_of_measure": "мл",
+                        "tags": [
+                            {
+                                "id": 1,
+                                "name": "Акция",
+                                "first_color": "#1B9F01",
+                                "second_color": "#FFFFFF"
+                            }
+                        ],
+                        "is_available": True,
+                        "description": "Шампунь для ухода за волосами.",
+                        "image_path": "/static/hygiene1.png",
+                        "compound": "Экстракты трав, витамин B5",
+                        "expiration": "12 месяцев",
+                        "storage": "При температуре не выше 25°C",
+                        "manufacturer": "ООО Красота, Россия",
+                        "previous_price": 250
+                    }
                 ]
             }
         ]
-    }
+    },
 ]
+
+
+cities = ('Москва, Санкт-Петербург, Новосибирск, Екатеринбург, Казань, Нижний Новгород, Самара, '
+          'Омск, Челябинск, Ростов-на-Дону, Уфа, Красноярск, Пермь, Воронеж, Волгоград, Краснодар, '
+          'Саратов, Тюмень, Тольятти, Ижевск, Барнаул, Ульяновск, Иркутск, Хабаровск, Ярославль, '
+          'Владивосток, Махачкала, Томск, Оренбург, Кемерово, Новокузнецк, Рязань, Астрахань, Пенза, '
+          'Липецк, Тула, Калининград, Курск, Ставрополь, Улан-Удэ, Тверь, Магнитогорск, Иваново, '
+          'Брянск, Белгород, Сочи, Сургут, Чита, Арзамас, Балашиха')
 
 order_statuses = [
     {
@@ -1070,31 +1001,113 @@ async def fill_database() -> bool:
 
 async def fill_cities() -> bool:
     db = Database()
-    for city in cities:
-        city_ = await db.add_city(name=city.get('name'))
-        if city.get('branches'):
-            for branch in city.get('branches'):
-                address = branch.get('address')
-                address_ = await db.add_branch_address(
-                    city_id=city_.id,
-                    street=address.get('street'),
-                    house=address.get('house'),
-                    floor=address.get('floor'),
-                    flat=address.get('flat'),
-                    entrance=address.get('entrance'),
-                    latitude=address.get('latitude'),
-                    longitude=address.get('longitude'),
-                )
-                branch_ = await db.add_branch(
-                    name=branch.get('name'),
-                    address_id=address_.id,
-                    city_id=city_.id
-                )
-                if branch.get('products'):
-                    for product in branch.get('products'):
-                        await db.add_branch_product(
-                            product_id=product.get('product_id'),
-                            branch_id=branch_.id,
-                            amount=product.get('amount')
-                        )
-    return True
+    for city in cities.split(','):
+        await db.add_city(name=city, is_available=False)
+
+    for city in range(1, 6):
+        await db.update_city(id=city, is_available=True)
+
+cities_data = [
+    {
+        'branches': [
+            {
+                'name': 'Москва Центр',
+                'address': {
+                    'street': 'Красная площадь',
+                    'house': '1',
+                    'floor': '1',
+                    'flat': '1',
+                    'entrance': '1',
+                    'latitude': 55.753215,
+                    'longitude': 37.622504
+                },
+                'products': [
+                    {
+                        'product_id': 12,
+                        'amount': 10,
+                    },
+                    {
+                        'product_id': 4,
+                        'amount': 10,
+                    },
+                    {
+                        'product_id': 8,
+                        'amount': 5,
+                    },
+                    {
+                        'product_id': 9,
+                        'amount': 5,
+                    },
+                    {
+                        'product_id': 5,
+                        'amount': 3,
+                    },
+                ]
+            },
+            {
+                'name': 'Москва Север',
+                'address': {
+                    'street': 'asdasda',
+                    'house': '12',
+                    'floor': '12',
+                    'flat': '12',
+                    'entrance': '12',
+                    'latitude': 55.751215,
+                    'longitude': 37.612504
+                },
+                'products': [
+                    {
+                        'product_id': 11,
+                        'amount': 10,
+                    },
+                    {
+                        'product_id': 10,
+                        'amount': 10,
+                    },
+                    {
+                        'product_id': 8,
+                        'amount': 5,
+                    },
+                    {
+                        'product_id': 2,
+                        'amount': 5,
+                    },
+                    {
+                        'product_id': 6,
+                        'amount': 3,
+                    },
+                ]
+            }
+        ]
+    }
+]
+
+async def add_branches():
+    db = Database()
+    city = cities_data[0]
+    city_ = await db.add_city(name='Москва')
+    if city.get('branches'):
+        for branch in city.get('branches'):
+            address = branch.get('address')
+            address_ = await db.add_branch_address(
+                city_id=city_.id,
+                street=address.get('street'),
+                house=address.get('house'),
+                floor=address.get('floor'),
+                flat=address.get('flat'),
+                entrance=address.get('entrance'),
+                latitude=address.get('latitude'),
+                longitude=address.get('longitude'),
+            )
+            branch_ = await db.add_branch(
+                name=branch.get('name'),
+                address_id=address_.id,
+                city_id=city_.id
+            )
+            if branch.get('products'):
+                for product in branch.get('products'):
+                    await db.add_branch_product(
+                        product_id=product.get('product_id'),
+                        branch_id=branch_.id,
+                        amount=product.get('amount')
+                    )
