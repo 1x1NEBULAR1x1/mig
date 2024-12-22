@@ -128,7 +128,7 @@ const ProductModal = () => {
                         amount: dataStore.cart.find((cartItem) => cartItem.product === uiStore.selectedProduct?.product)!.amount - 1
                       })}
                     >
-                      <svg width="0.8333vw" height="0.1667vh" viewBox="0 0 14 2" fill="none"
+                      <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" clipRule="evenodd"
                               d="M13.6673 1.83268H0.333984V0.166016H13.6673V1.83268Z"
@@ -154,7 +154,7 @@ const ProductModal = () => {
                         amount: dataStore.cart.find((cartItem) => cartItem.product === uiStore.selectedProduct?.product)!.amount + 1
                       })}
                     >
-                      <svg width="0.8333vw" height="1.33vh" viewBox="0 0 15 16" fill="none"
+                      <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
                            xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M8.33333 0.5H6.66667V7.16667H0V8.83333H6.66667V15.5H8.33333V8.83333H15V7.16667H8.33333V0.5Z"

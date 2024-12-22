@@ -1499,8 +1499,8 @@
 }
 
 .productModalButton svg {
-  width: 2vh;
-  height: 2vh;
+  width: 2vh !important;
+  height: 2vh !important;
 }
 
 .productModalAmountInput {
@@ -1850,6 +1850,7 @@
 .cart {
   position: sticky;
   bottom: 1vh;
+  box-shadow: 1px 1px 22px rgba(0, 0, 0, 0.25);
   z-index: 10000;
   display: flex;
   flex-direction: column-reverse;

@@ -59,7 +59,7 @@ const SelectCity = () => {
           />
         </View>
         <View className='w-full h-[1px] bg-[#EEEFF3]'></View>
-        <ScrollView className='flex flex-col gap-3 p-3'>
+        <ScrollView className='flex flex-col h-auto max-h-[54vh] gap-3 p-3'>
           {isLoading ? <Spinner
             visible={isLoading}
             textContent={"Загрузка данных городов..."}
