@@ -6,7 +6,7 @@ import {useState} from "react";
 import {useSwipeable} from "react-swipeable";
 
 const CatalogContent = () => {
-  const [isSiderOpened, setIsSiderOpened] = useState(true);
+  const [isSiderOpened, setIsSiderOpened] = useState(false);
   const handlers = useSwipeable({
     onSwipedLeft: () => setIsSiderOpened(false),
     onSwipedRight: () => setIsSiderOpened(true),

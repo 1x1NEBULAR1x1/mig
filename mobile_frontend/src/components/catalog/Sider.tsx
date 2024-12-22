@@ -12,14 +12,18 @@ const Sider = ({isSiderOpened, setIsSiderOpened}: {isSiderOpened: boolean, setIs
     className={styles.sider}
     style={{left: isSiderOpened ? 0 : "-48vw", width: 'auto', height: 'auto'}}
     onClick={() => {
-      if (isSiderOpened) {
+      if (!isSiderOpened) {
         setIsSiderOpened(!isSiderOpened)
       }
     }}
   >
     <div
       className={styles.header}
-      onClick={(e) => e.stopPropagation()}
+      onClick={(e) => {
+        if (isSiderOpened) {
+          e.stopPropagation()
+        }
+      }}
       style={isSiderOpened ? {} : {width: '20vw', height: '0px'}}
     >
       <div className={styles.header1}>
