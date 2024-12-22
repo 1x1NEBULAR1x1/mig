@@ -1059,13 +1059,14 @@
 .contentLong {
   position: relative;
   width: 100%;
-  min-height: 64.8vh;
+  min-height: 70vh;
   height: auto;
   background: #EEEFF3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.4vw;
+  padding: 1vh 0;
   transition: all 0.3s ease;
   align-items: flex-start;
 }
@@ -1076,15 +1077,14 @@
   padding: 0;
   width: calc(100vw - 2vh);
   height: auto;
-  margin: 0 1vh;
   position: fixed;
-  top: 7.5vh;
+  bottom: 30%;
 }
 .siderSubCategoryContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 3vh 1.6vh 1.6vh 1.6vh;
+  padding: 1.6vh 1vh 1.6vh 1.6vh;
   width: 65vw;
   height: auto;
   background-color: white;
@@ -1850,13 +1850,14 @@
 .cart {
   position: sticky;
   bottom: 1vh;
-  box-shadow: 1px 1px 22px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 22px rgba(0, 0, 0, 0.15);
   z-index: 10000;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
   padding: 0;
-  width: 100%;
+  width: calc(100vw - 2vh);
+  margin: 0 1vh;
   background: #FFFFFF;
   border-radius: 1.7vh;
 }

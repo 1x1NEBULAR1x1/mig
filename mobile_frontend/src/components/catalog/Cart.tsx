@@ -69,6 +69,10 @@ const Cart = () => {
 							onClick={() => {
                 uiStore.setRecomendations(products);
                 uiStore.setIsOrderPageOpen(true);
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth' // Makes the scrolling smooth
+                });
               }}
 						>
 							Перейти в корзину

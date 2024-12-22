@@ -9,7 +9,13 @@ const Category = ({ category }: { category: Category }) => {
   return (
     <div
       className={styles.category}
-      onClick={() => uiStore.setSelectedCategory(category)}
+      onClick={() => {
+        uiStore.setSelectedCategory(category);
+         window.scrollTo({
+           top: 0,
+           behavior: 'smooth' // Makes the scrolling smooth
+         });
+      }}
     >
       <div className={styles.categoryText}>
         <div className={styles.categoryName}>
