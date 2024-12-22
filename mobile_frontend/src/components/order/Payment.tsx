@@ -45,6 +45,7 @@ const Payment = () => {
       deliveryPrice: (deliveryCost.data || 0),
       paymentMethod: orderStore.paymentMethod,
       curierTips: tips,
+      tax: parseFloat((cartPrice * (taxRate.data || 0)  / 100).toFixed(2)),
       priority: orderStore.orderDeliveryPriority!
     };
     if (order) {

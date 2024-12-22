@@ -83,6 +83,7 @@ export type OrderCreate = {
   curierTips: number
   priority: OrderPriority
   totalPrice?: number
+  tax: number
 }
 
 export type OrderPriority = {
