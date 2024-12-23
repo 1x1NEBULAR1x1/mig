@@ -19,7 +19,7 @@ const HistoryContent = () => {
     priorityPrice = cartPrice * (priority.extraCost / 100)
   }
   const tips = uiStore.viewOrderHistory?.curierTips || 0
-  const totalPrice = parseFloat(cartPrice.toFixed(2)) + parseFloat((uiStore.viewOrderHistory?.deliveryPrice || 0).toFixed(2)) + parseFloat(priorityPrice.toFixed(2)) + parseFloat((cartPrice * (uiStore.viewOrderHistory?.tax || 0)  / 100).toFixed(2)) + parseFloat(tips.toFixed(2))
+  const totalPrice = parseFloat(cartPrice.toFixed(2)) + parseFloat((uiStore.viewOrderHistory?.deliveryPrice || 0).toFixed(2)) + parseFloat(priorityPrice.toFixed(2)) + parseFloat((uiStore.viewOrderHistory?.tax ? uiStore.viewOrderHistory.tax : 0).toFixed(2)) + parseFloat(tips.toFixed(2))
 
 
   if (dataStore.orders.length === 0) {

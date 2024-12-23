@@ -103,6 +103,7 @@ async def create_order(order: OrderCreate, request: Request):
             status_id=1,
             priority_id=order.priority_id,
             curier_tips=order.curier_tips,
+            tax=order.tax
         )
 
         for product in order.products:

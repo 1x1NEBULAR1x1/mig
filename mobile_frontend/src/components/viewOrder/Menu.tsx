@@ -18,7 +18,7 @@ const Menu = () => {
     priorityPrice = cartPrice * (priority.extraCost / 100)
   }
   const tips = uiStore.viewOrder.curierTips
-  const totalPrice = parseFloat(cartPrice.toFixed(2)) + parseFloat((uiStore.viewOrder.deliveryPrice).toFixed(2)) + parseFloat(priorityPrice.toFixed(2)) + parseFloat((cartPrice * (uiStore.viewOrder.tax || 0)  / 100).toFixed(2)) + parseFloat(tips.toFixed(2))
+  const totalPrice = parseFloat(cartPrice.toFixed(2)) + parseFloat((uiStore.viewOrder.deliveryPrice).toFixed(2)) + parseFloat(priorityPrice.toFixed(2)) + parseFloat(uiStore.viewOrder.tax.toFixed(2)) + parseFloat(tips.toFixed(2))
 
 
   return (
