@@ -10,7 +10,7 @@ const Sider = ({isSiderOpened, setIsSiderOpened}: {isSiderOpened: boolean, setIs
     <>{!!uiStore.selectedCategory?.subCategories?.length &&
   <aside
     className={styles.sider}
-    style={{left: isSiderOpened ? 0 : "-48vw", width: 'auto', height: 'auto'}}
+    style={{left: isSiderOpened ? 0 : "-65vw", width: 'auto', height: 'auto'}}
     onClick={() => {
       if (!isSiderOpened) {
         setIsSiderOpened(!isSiderOpened)

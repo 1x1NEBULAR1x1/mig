@@ -1296,6 +1296,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .productModal {
@@ -1307,11 +1309,19 @@
   gap: 1.666667vw;
   width: auto;
   height: auto;
+  max-height: 70vh;
+  overflow-y: auto;
   background: #FFFFFF;
   border-radius: 2vh;
   z-index: 10;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none;
 }
-
+.productModal::-webkit-scrollbar {
+  display: none; /* Для Webkit-браузеров */
+}
 .productModalLeft {
   display: flex;
   flex-direction: column;
@@ -1740,7 +1750,7 @@
   align-items: center;
   padding: 0.5vh 1vw;
   width: 100%;
-  height: auto;
+  height: 3.585vh;
   background: #EEEFF3;
   border-radius: 3.333vw;
   font-family: 'TT Firs Neue Trl', sans-serif;
@@ -1896,20 +1906,24 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 4vw;
   gap: 1vh;
   width: 100%;
   height: auto;
+  max-height: 60vh;
+  overflow-y: auto;
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none;
 }
-
+.cartBody::-webkit-scrollbar {
+  display: none; /* Для Webkit-браузеров */
+}
 .cartList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
-  width: 100%;
+  padding: 1vh;
+  width: 94vw;
   height: auto;
-  padding-top: 0.8vh;
 }
 
 .cartFooter {
@@ -2022,7 +2036,7 @@
   align-items: center;
   padding: 0;
   gap: 0.833333vh;
-  width: calc(88vw - 10vh);
+  width: calc(100% - 10vh);
   height: 100%;
 }
 
