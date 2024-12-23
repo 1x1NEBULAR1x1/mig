@@ -4,9 +4,7 @@ import { useUIStore } from "../../../stores/useUIStore.ts";
 import OrderCard from "../order/OrderCard.tsx";
 
 const Profile = () => {
-
   const dataStore = useDataStore(state => state)
-
   const uiStore = useUIStore(state => state)
 
   return (

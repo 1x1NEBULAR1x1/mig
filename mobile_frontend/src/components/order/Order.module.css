@@ -1,5 +1,5 @@
 @media (min-width: 1200px){
-.contentMap {
+.contentLong {
   position: relative;
   padding-top: 4vh;
   padding-bottom: 4vh;
@@ -12,6 +12,21 @@
   gap: 0.4vw;
   transition: all 0.3s ease;
   align-items: flex-start;
+}
+  .map {
+    flex: 1;
+  }
+.formInputElementErrer {
+  font-family: 'TT Firs Neue Trl', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1vh;
+  line-height: 140%;
+  color: #EC4646;
+}
+textarea:focus {
+  outline: none;
+
 }
 
 .paymentElementTitle {

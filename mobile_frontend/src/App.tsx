@@ -105,6 +105,12 @@ const App = () => {
     })
   }
 
+  useEffect(() => {
+    if (uiStore.isProfileOpened && dataStore.number) {
+      loadOrders().then(orders => dataStore.setOrders(orders))
+    }
+  }, [uiStore.isProfileOpened]);
+
   let statusesIntervalId: number
   const startStatusesInterval = () => {
     if (dataStore.orders && dataStore.orders.length > 0) {

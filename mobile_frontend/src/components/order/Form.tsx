@@ -4,7 +4,6 @@ import {useDataStore} from "../../../stores/useDataStore.ts";
 import {useOrderStore} from "../../../stores/useOrderStore.ts";
 import {useEffect, useState} from "react";
 import {Map, Placemark} from "@pbe/react-yandex-maps";
-import classes from "../viewOrder/ViewOrder.module.css";
 import axios from "axios";
 import {useCitiesStore} from "../../../stores/useCitiesStore.ts";
 import {Address} from "../../../types/models.ts";
@@ -219,7 +218,7 @@ const Form = () => {
                   value={orderStore.orderFloor}
                   onInput={(e) => orderStore.setOrderFloor(e.currentTarget.value)}
                 />
-                {error === 'floor' && <p style={{fontSize: '0.65vh', color: '#EC4646'}}>*данное поле обязательно</p>}
+                {error === 'floor' && <p className={styles.formInputElementErrer}>*данное поле обязательно</p>}
               </div>
             </div>
             <div className={styles.formInputElement}>
@@ -253,7 +252,7 @@ const Form = () => {
           </div>
           {coordinates &&
 						<Map
-							className={classes.map}
+							className={styles.map}
 							defaultState={{
                 center: coordinates,
                 zoom: 15,

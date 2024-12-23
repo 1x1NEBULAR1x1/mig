@@ -2,7 +2,7 @@ import {Category, City, Order, OrderCreate, OrderPriority, User} from "../types/
 import axios, {AxiosResponse} from "axios";
 import {AddressForDeliveryPrice} from "../hooks/useDeliveryPrice";
 
-export const url = ''
+export const url = 'http://127.0.0.1:80'
 
 export const yandexMapsApiKey = import.meta.env.VITE_YANDEX_MAPS_API_KEY
 
