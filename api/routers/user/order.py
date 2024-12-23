@@ -206,6 +206,7 @@ async def create_order_mobile(order: OrderCreate, token: str):
             status_id=1,
             priority_id=order.priority_id,
             curier_tips=order.curier_tips,
+            tax=order.tax
         )
 
         for product in order.products:

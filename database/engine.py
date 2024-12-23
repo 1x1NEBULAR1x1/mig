@@ -617,11 +617,11 @@ class Database:
             delivery_price: float,
             status_id: int,
             priority_id: int,
-            curier_tips: float = 0.0,
+            curier_tips: float,
+            tax: float,
             total_price: float = 0.0,
             curier_id: int = None,
             finished: datetime = None,
-            tax: float = 0.0
     ) -> Order | None:
         async with self.ssn() as ssn:
             order = Order(

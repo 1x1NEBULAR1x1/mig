@@ -46,6 +46,7 @@ export const loadCatalog = async (id: number) => {
     return res as Category[]
 }
 
+
 export const loadOrders = async () => {
     const res = await axios.get(url + '/orders', {withCredentials: true}).then(data => data.data)
     return await res as Order[]
@@ -69,7 +70,7 @@ export const requestOrder = async (order: OrderCreate): Promise<Order | undefine
     const {data, status} = await axios.post<Order>(url + '/order', {
       ...order,
       priorityId: order.priority.id,
-      curierTips: 0,
+      curierTips: order.curierTips,
       products: order.products.map(product => ({productId: product.product.id, amount: product.amount}))
     }, {withCredentials: true})
     if (status === 200) {

@@ -71,7 +71,7 @@ class OrderBase(BaseModel):
     delivery_price: float = Field(..., description="Order delivery price", examples=[100.0], ge=0)
     products: Sequence[OrderProductCreate]
     priority_id: int = Field(..., description='Order priority delivery time id', examples=[1])
-    curier_tips: float = Field(0.0, description="Order curier tips", examples=[100.0], ge=0)
+    curier_tips: float = Field(description="Order curier tips", examples=[100.0], ge=0)
     is_payment_accepted: bool = Field(False, description="Order payment status", examples=[False])
     tax: float = Field(0.0, description="Order tax", examples=[100.0], ge=0)
 

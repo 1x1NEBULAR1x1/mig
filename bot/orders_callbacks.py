@@ -25,7 +25,7 @@ async def get_order_info(db: Database, order_id: int) -> str:
         if p.id == order.priority_id:
             prioritiy_price = p.extra_cost * order.total_price / 100
 
-    total_price = order.total_price + prioritiy_price + order.curier_tips + order.delivery_price
+    total_price = order.total_price + prioritiy_price + order.curier_tips + order.delivery_price + order.tax
 
     text = (
         f"<b>💠 Заказ №: {order.id}\n\n"
@@ -39,6 +39,7 @@ async def get_order_info(db: Database, order_id: int) -> str:
         f"⚡ Дополнительная плата за скорость доставки: {prioritiy_price:.2f} ₽\n"
         f"💸 Чаевые курьеру: {order.curier_tips:.2f} ₽\n"
         f'🛒 Стоимость корзины: {order.total_price:.2f} ₽\n'
+        f"📦 Налог: {order.tax:.2f} ₽\n"
         f"💰 Общая стоимость: {total_price:.2f} ₽\n"
         f"🚚 Курьер: {f'ID: {order.curier_id} - {order.curier.full_name}' if order.curier else 'не назначен'}\n"
         f"👁‍🗨 Статус заказа: {order.status.full_status}\n"

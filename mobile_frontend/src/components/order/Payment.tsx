@@ -4,7 +4,7 @@ import { useDataStore } from "../../../stores/useDataStore.ts";
 import { useCitiesStore } from "../../../stores/useCitiesStore.ts";
 import { useOrderStore } from "../../../stores/useOrderStore.ts";
 import axios from "axios";
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import {OrderCreate} from "../../../types/models.ts";
 import {checkVerificationCode, sendVerificationCode} from "../../../requests/load_data.ts";
 import {useDeliveryPrice} from "../../../hooks/useDeliveryPrice.ts";
@@ -23,11 +23,15 @@ const Payment = () => {
   if (orderStore.orderDeliveryPriority) {
     priorityPrice = cartPrice * (orderStore.orderDeliveryPriority!.extraCost / 100)
   }
+  const [tips, setTips] = useState<number>(orderStore.paymentTips === 'Без чая' ? 0 : orderStore.paymentTips === '5%' ? cartPrice * 0.05 : orderStore.paymentTips === '10%' ? cartPrice * 0.1 : orderStore.paymentTips === '20%' ? cartPrice * 0.2 : 0)
   const address = citiesStore.selectedCity?.name + ', ' + orderStore.orderStreet + ', ' + orderStore.orderHouse
-  const tips = orderStore.paymentTips === 'Без чая' ? 0 : orderStore.paymentTips === '5%' ? cartPrice * 0.05 : orderStore.paymentTips === '10%' ? cartPrice * 0.1 : orderStore.paymentTips === '20%' ? cartPrice * 0.2 : 0
   const totalPrice = parseFloat(cartPrice.toFixed(2)) + parseFloat((deliveryCost.data || 0).toFixed(2)) + parseFloat(priorityPrice.toFixed(2)) + parseFloat((cartPrice * (taxRate.data || 0)  / 100).toFixed(2)) + parseFloat(tips.toFixed(2))
 
+  useEffect(() => {
+    setTips(orderStore.paymentTips === 'Без чая' ? 0 : orderStore.paymentTips === '5%' ? cartPrice * 0.05 : orderStore.paymentTips === '10%' ? cartPrice * 0.1 : orderStore.paymentTips === '20%' ? cartPrice * 0.2 : 0)
+  }, [orderStore.paymentTips]);
   const createOrder = async () => {
+    const tips = parseFloat((orderStore.paymentTips === 'Без чая' ? 0 : orderStore.paymentTips === '5%' ? cartPrice * 0.05 : orderStore.paymentTips === '10%' ? cartPrice * 0.1 : orderStore.paymentTips === '20%' ? cartPrice * 0.2 : 0).toFixed(2))
     const order: OrderCreate = {
       totalPrice: totalPrice,
       address: {
@@ -42,7 +46,7 @@ const Payment = () => {
         longitude: orderStore.longtude,
       },
       products: dataStore.cart,
-      deliveryPrice: (deliveryCost.data || 0),
+      deliveryPrice: (parseFloat((deliveryCost.data)?.toFixed(2) || '0') || 0),
       paymentMethod: orderStore.paymentMethod,
       curierTips: tips,
       tax: parseFloat((cartPrice * (taxRate.data || 0)  / 100).toFixed(2)),

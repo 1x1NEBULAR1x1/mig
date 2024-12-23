@@ -64,7 +64,7 @@ async def verify_phone(data: LoginData, response: JSONResponse):
 
         access_token = create_access_token(data={"sub": data.phone_number})
 
-        response.set_cookie(key="access_token", value=access_token)
+        response.set_cookie(key="access_token", value=access_token, httponly=False, samesite='none', secure=True)
 
         return {"message": "Phone number verified successfully", "access_token": access_token}
     except Exception as e:
@@ -79,7 +79,6 @@ async def verify_phone_mobile(phone_number: str, code: int):
             return JSONResponse(status_code=401, content={"error": "Invalid data"})
 
         access_token = create_access_token(data={"sub": phone_number})
-
         return {"message": "Phone number verified successfully", "access_token": access_token}
     except Exception as e:
         print(e)

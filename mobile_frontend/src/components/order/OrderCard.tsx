@@ -17,7 +17,7 @@ const OrderCard = ({order}: {order: Order}) => {
     priorityPrice = cartPrice * (priority.extraCost / 100)
   }
   const tips = order.curierTips
-  const totalPrice = parseFloat(cartPrice.toFixed(2)) + parseFloat((order.deliveryPrice).toFixed(2)) + parseFloat(priorityPrice.toFixed(2)) + parseFloat((cartPrice * (order.tax || 0)  / 100).toFixed(2)) + parseFloat(tips.toFixed(2))
+  const totalPrice = parseFloat(cartPrice.toFixed(2)) + parseFloat((order.deliveryPrice).toFixed(2)) + parseFloat(priorityPrice.toFixed(2)) + parseFloat((order.tax || 0).toFixed(2)) + parseFloat(tips.toFixed(2))
 
   return(<>
     <div
